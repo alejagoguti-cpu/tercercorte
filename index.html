@@ -22,7 +22,46 @@
 .slide.active .actor{transition:transform .3s,background .3s}.slide.active .actor:hover{transform:translateY(-5px) scale(1.05)}
 @media(max-width:700px){.motion-hint{right:4vw;bottom:65px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.slide:before,.tile b:before,.net-node circle,.network-canvas:before{animation:none!important}}
-</style></head><body><header><strong>KENNEDY / 2030</strong><nav><button id="indexBtn">ÍNDICE</button><button id="resetBtn">REINICIAR ESCENA</button></nav></header><div class="progress"><span id="bar"></span></div><div class="motion-hint">ANIMACIÓN ACTIVA · CLIC PARA AVANZAR</div><main>
+</style>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head><body>
+
+<!-- Gradientes y filtros compartidos inspirados en modelamiento2 -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+  <defs>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#45d6c5"></stop>
+      <stop offset="100%" stop-color="#1f8f82"></stop>
+    </linearGradient>
+    <linearGradient id="grad-yellow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c26b"></stop>
+      <stop offset="100%" stop-color="#d9902e"></stop>
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffb37a"></stop>
+      <stop offset="100%" stop-color="#e8763c"></stop>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8b4fe"></stop>
+      <stop offset="100%" stop-color="#7c3aed"></stop>
+    </linearGradient>
+    <linearGradient id="grad-coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ee7b7"></stop>
+      <stop offset="100%" stop-color="#059669"></stop>
+    </linearGradient>
+    <linearGradient id="grad-soporte" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eab04c"></stop>
+      <stop offset="100%" stop-color="#ef6f6f"></stop>
+    </linearGradient>
+    <linearGradient id="grad-resiliencia" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2fbfae"></stop>
+      <stop offset="100%" stop-color="#ef8b3c"></stop>
+    </linearGradient>
+    <filter id="blob-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+    </filter>
+  </defs>
+</svg>
+<header><strong>KENNEDY / 2030</strong><nav><button id="indexBtn">ÍNDICE</button><button id="resetBtn">REINICIAR ESCENA</button></nav></header><div class="progress"><span id="bar"></span></div><div class="motion-hint">ANIMACIÓN ACTIVA · CLIC PARA AVANZAR</div><main>
 <section class="slide active dark"><p class="eyebrow">Proyecto territorial · Tercer corte · 2026</p><h1>Kennedy<br>2030<span style="color:#2fd4c8">.</span></h1><p class="lead">¿Qué pasa cuando cambiamos las relaciones entre quienes producen, distribuyen, habitan y cuidan el territorio?</p><p class="small">Una propuesta en desarrollo. Las relaciones y escenarios presentados son hipótesis de diseño, no resultados verificados.</p></section>
 <section class="slide"><p class="eyebrow">01 / Punto de partida</p><h2>No todos necesitan lo mismo.</h2><p class="lead">Una decisión puede beneficiar a un actor y perjudicar a otro. Por eso no podemos asumir que todos quieren el mismo futuro para Kennedy.</p><div class="grid"><div class="tile reveal"><b>¿Quién decide?</b><p>El poder no está repartido por igual.</p></div><div class="tile reveal"><b>¿Quién gana?</b><p>Una mejora para unos puede cambiar el trabajo de otros.</p></div><div class="tile reveal"><b>¿Quién pierde?</b><p>También cuentan las especies que no pueden hablar en una asamblea.</p></div></div></section>
 
@@ -34,7 +73,84 @@
 <section class="slide"><p class="eyebrow">08 / Arquitectura</p><h2>Diseñar para que algo pueda pasar.</h2><div class="grid"><div class="tile reveal"><b>Un taller</b><p>Permite aprender a cultivar y compartir prácticas.</p></div><div class="tile reveal"><b>Una huerta</b><p>Necesita agua, cuidado, acceso y condiciones adecuadas.</p></div><div class="tile reveal"><b>Un refugio vegetal</b><p>Debe responder a las necesidades reales de las especies.</p></div></div><p class="note">La siguiente etapa requiere plantas, secciones, áreas y comprobación técnica.</p></section>
 <section class="slide lime"><p class="eyebrow">09 / Decidir</p><h2>¿Qué hacemos primero?</h2><p class="lead">No se trata de proponerlo todo. Se trata de comparar acciones y entender sus consecuencias para cada actor.</p><div class="grid"><div class="tile reveal"><b>Impacto</b><p>Articulación de organizaciones comunitarias, espacios de aprendizaje y redes locales de producción de alimentos en Kennedy.</p></div><div class="tile reveal"><b>Recursos</b><p>Participación de organizaciones existentes, acuerdos de uso y gestión del espacio, acompañamiento técnico y recursos para operación y mantenimiento.</p></div><div class="tile reveal"><b>Riesgos</b><p>Posibles conflictos por el uso del suelo, distribución desigual de beneficios y afectaciones a la biodiversidad si las intervenciones no se evalúan.</p></div></div></section>
 <section class="slide dark"><p class="eyebrow">10 / Próximo paso</p><h2>Del diagrama al espacio.</h2><p class="lead">Seleccionar una intervención, dibujar cómo funciona y probar sus relaciones en escenarios comparables.</p><p class="small">Pendiente: cartografía validada, reglas de simulación, red completa de actores, especies verificadas, medidas y permisos.</p></section>
-<section class="slide dark" id="socialNetworkSlide"><p class="eyebrow">11 / Articulación social · Modelo por validar</p><h2>¿Cómo se construye socialmente la red?</h2><p class="lead">50 actores y componentes organizados en cinco hubs de articulación: convocar, acordar, formar, intercambiar y cuidar. Las conexiones representan relaciones propuestas, no alianzas confirmadas.</p><div class="network-panel" style="grid-template-columns:minmax(0,2fr) minmax(240px,1fr)"><div class="network-canvas" style="min-height:440px"><svg id="socialGraph" viewBox="0 0 820 540" aria-label="Red de 50 nodos interactivos" style="width:100%;height:100%;min-height:420px"></svg></div><aside class="network-info" id="socialInfo"><h3>50 nodos · 5 hubs</h3><p>Selecciona un nodo para explorar su función y sus relaciones posibles.</p><div class="network-actions"><button id="socialAll">Mostrar red completa</button><button id="socialNext">Siguiente conexión</button></div><p id="socialCount">0 conexiones visibles</p><div id="socialLegend" style="font-size:12px;line-height:1.9;margin:12px 0"><b>CONVENCIONES</b><div>▣ Nodo destacado: hub articulador</div><div>▭ Nodo con icono y nombre: actor o componente</div><div>━ Línea continua: vínculo propuesto</div><div>┄ Línea discontinua: conexión entre hubs</div><div>Color: categoría de actor</div><div style="margin-top:8px;color:#8ce5df">Clic: seleccionar · Doble clic: entrar a su subred</div></div><button id="socialBack" style="display:none">← Volver a la red completa</button><p class="note">Hipótesis de trabajo. La existencia de organizaciones concretas, sus acuerdos y las relaciones ecológicas deben comprobarse.</p></aside></div><div class="grid"><div class="tile reveal"><b>1 · Convocatoria</b><p>Habitantes y organizaciones identifican necesidades y representantes.</p></div><div class="tile reveal"><b>2 · Acuerdos</b><p>Se negocian usos, responsabilidades, conflictos y reglas de acceso.</p></div><div class="tile reveal"><b>3 · Intercambio</b><p>Formación, materiales, alimentos, información y cuidado circulan entre espacios.</p></div></div></section>
+
+<section class="slide dark" id="socialNetworkSlide">
+  <p class="eyebrow">11 / Articulación social · Matriz Maestra Kennedy 2030</p>
+  <h2>¿Cómo organiza, relaciona y prioriza Kennedy 2030 los componentes territoriales?</h2>
+  <p class="lead">50 nodos categóricos y 5 hubs articuladores en constante interacción (social, socioeconómica, espacial, sociopolítica y socioambiental). Arrastra los nodos con física de resortes, pulsa los vínculos para consultar su sustento de evidencia o haz clic en cualquier hub para sumergirte en su subred analítica.</p>
+
+  <!-- Switch / Controls Bar -->
+  <div class="network-mode-bar" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:18px 0 16px;">
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button class="control active" id="btnModeHubs" style="background:#2fd4c8;color:#08131d;border-color:#2fd4c8;font-weight:700;">Hubs Articuladores (5)</button>
+      <button class="control" id="btnMode50" style="color:#eaf4f4;">Red Completa (50 Nodos)</button>
+      <button class="control" id="btnResetPhysics" style="color:#eaf4f4;" title="Reiniciar posiciones"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+    </div>
+    <div class="dim-chips" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="pill" style="font-size:11px;padding:4px 10px;border-color:#2fbfae;color:#2fbfae;">● Social</span>
+      <span class="pill" style="font-size:11px;padding:4px 10px;border-color:#eab04c;color:#eab04c;">● Socioeconómica</span>
+      <span class="pill" style="font-size:11px;padding:4px 10px;border-color:#ef8b3c;color:#ef8b3c;">● Espacial</span>
+      <span class="pill" style="font-size:11px;padding:4px 10px;border-color:#b784f4;color:#b784f4;">● Sociopolítica</span>
+      <span class="pill" style="font-size:11px;padding:4px 10px;border-color:#34d399;color:#34d399;">● Socioambiental</span>
+    </div>
+  </div>
+
+  <!-- Hero Visual Card -->
+  <div class="hero-visual-card">
+    <p class="visual-question">¿Cómo se articula, negocia y sostiene la red multiescalar de Kennedy?</p>
+
+    <div class="legend">
+      <span class="legend-title">Convenciones</span>
+      <span class="legend-item">
+        <svg class="leg-svg" viewBox="0 0 50 12" width="50" height="12" aria-hidden="true">
+          <line x1="2" y1="6" x2="38" y2="6" stroke="rgba(255,255,255,0.45)" stroke-width="1.6" stroke-dasharray="3 3"></line>
+          <path d="M38,6 L31,2 L31,10 Z" fill="rgba(255,255,255,0.65)"></path>
+        </svg>
+        Redes dirigidas
+      </span>
+      <span class="legend-item">
+        <svg class="leg-svg" viewBox="0 0 56 12" width="56" height="12" aria-hidden="true">
+          <line x1="8" y1="6" x2="48" y2="6" stroke="#2fd4c8" stroke-width="1.8" stroke-dasharray="4 3"></line>
+          <path d="M8,6 L15,2 L15,10 Z" fill="#2fd4c8"></path>
+          <path d="M48,6 L41,2 L41,10 Z" fill="#2fd4c8"></path>
+        </svg>
+        Coordinación entre hubs
+      </span>
+      <span class="legend-item" style="color:#2fd4c8;font-weight:600;">
+        <i class="fa-solid fa-hand-pointer" style="margin-right:4px;"></i> Clic en hub = Subred · Clic en vínculo = Evidencia
+      </span>
+    </div>
+
+    <!-- Main Dynamic SVG for 5 Hubs -->
+    <svg viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-network-svg" aria-label="Diagrama de red interactiva Kennedy 2030">
+      <g class="links" id="kennedy-main-links"></g>
+      <g class="nodes" id="kennedy-main-nodes"></g>
+    </svg>
+
+    <!-- Global 50-node container (shown when toggled) -->
+    <svg viewBox="0 0 880 620" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-50-svg" style="display:none;max-width:880px;" aria-label="Red completa de 50 nodos">
+      <g class="links-50" id="kennedy-50-links"></g>
+      <g class="nodes-50" id="kennedy-50-nodes"></g>
+    </svg>
+  </div>
+
+  <!-- 3 Feature blocks inspired by modelamiento2 -->
+  <div class="grid" style="margin-top:28px;">
+    <div class="tile reveal">
+      <b style="color:#2fbfae;"><i class="fa-solid fa-users" style="margin-right:8px;"></i>1 · Dimensión Social y Convocatoria</b>
+      <p>JAC, residentes, colectivos ambientales y veedurías articulan acuerdos de base y agendas compartidas para el territorio.</p>
+    </div>
+    <div class="tile reveal">
+      <b style="color:#eab04c;"><i class="fa-solid fa-seedling" style="margin-right:8px;"></i>2 · Dimensión Socioeconómica</b>
+      <p>Huerteros, recicladores, tenderos y Corabastos estructuran circuitos de economía circular, compostaje y abastecimiento.</p>
+    </div>
+    <div class="tile reveal">
+      <b style="color:#b784f4;"><i class="fa-solid fa-landmark" style="margin-right:8px;"></i>3 · Soporte Institucional y Ecológico</b>
+      <p>Universidades, Alcaldía Local, Jardín Botánico y la red ecosistémica (suelos, humedales, árboles) sostienen la resiliencia.</p>
+    </div>
+  </div>
+</section>
+
 </main><div class="footer"><button id="prev">← ANTERIOR</button><span id="counter">01 / 11</span><button id="next">SIGUIENTE →</button></div><script>
 const slides=[...document.querySelectorAll('.slide')];let current=0;function show(n){current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=String(current+1).padStart(2,'0')+' / '+slides.length;document.getElementById('bar').style.width=((current+1)/slides.length*100)+'%';document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;window.scrollTo(0,0)}function reveal(){let a=[...slides[current].querySelectorAll('.reveal:not(.shown)')];if(a.length){a[0].classList.add('shown');return true}return false}document.getElementById('next').onclick=()=>{if(!reveal())show(current+1)};document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('resetBtn').onclick=()=>slides[current].querySelectorAll('.reveal').forEach(e=>e.classList.remove('shown'));document.getElementById('indexBtn').onclick=()=>{let s=prompt('Ir a escena (1-'+slides.length+')');if(s!==null&&Number.isInteger(+s)&&+s>=1&&+s<=slides.length)show(+s-1)};document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();document.getElementById('next').click()}if(e.key==='ArrowLeft')show(current-1)});const data=[['Vecinos','Quieren espacios que puedan usar y cuidar.','Pueden participar en acuerdos y actividades.','No todos tienen el mismo tiempo ni los mismos intereses.'],['Agricultores','Necesitan agua, espacio y continuidad.','Deciden cómo cultivar dentro de sus posibilidades.','La producción depende de recursos y cuidados.'],['Tenderos','Necesitan productos que puedan vender.','Deciden qué comprar y ofrecer.','Los excedentes locales pueden ser irregulares.'],['Comerciantes de Corabastos','Dependen de redes comerciales existentes.','Participan en decisiones de compra y venta.','Cambiar los circuitos puede afectar sus ingresos.'],['Recicladores','Necesitan condiciones seguras para trabajar.','Pueden participar en rutas de aprovechamiento.','No todo residuo sirve para compostaje.'],['Aves','Necesitan alimento, refugio y lugares seguros.','Se desplazan según las condiciones del entorno.','El vidrio y algunas intervenciones pueden dañarlas.'],['Plantas','Necesitan agua, luz y suelo adecuados.','Crecen según sus condiciones ambientales.','No toda especie sirve para cualquier lugar.'],['Hongos','Necesitan sustrato y condiciones controladas.','Descomponen materia orgánica según la especie.','El cultivo exige control técnico y sanitario.']];const box=document.getElementById('actors');data.forEach((a,i)=>{let b=document.createElement('button');b.className='actor';b.textContent=a[0];b.onclick=()=>{box.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');document.getElementById('actorDetail').innerHTML='<h3>'+a[0]+'</h3><p><b>Qué necesita:</b> '+a[1]+'</p><p><b>Qué puede hacer:</b> '+a[2]+'</p><p><b>Qué debemos tener en cuenta:</b> '+a[3]+'</p>'};box.appendChild(b)});show(0);
 </script><script>
@@ -64,29 +180,4100 @@ document.getElementById('resetBtn')?.addEventListener('click',()=>{play(document
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else play(document.querySelector('.slide.active'))});
 })();
 </script><script>
-(function(){
-const groups=[
-{label:'Comunidad',color:'#2fbfae',names:['Residentes del barrio','Juntas de acción comunal','Liderazgos juveniles','Personas mayores','Mujeres cuidadoras','Familias participantes','Colectivos ambientales','Comités de convivencia','Voluntariado barrial','Veedurías ciudadanas']},
-{label:'Producción y comercio',color:'#eab04c',names:['Huerteros urbanos','Agricultores periurbanos','Vendedores de plaza','Tenderos','Comerciantes de Corabastos','Transportadores','Recicladores de oficio','Gestores de compostaje','Cocinas comunitarias','Consumidores locales']},
-{label:'Formación y gestión',color:'#ef8b3c',names:['Docentes','Estudiantes','Universidades','Colegios','Investigadores','Diseñadores','Facilitadores comunitarios','Gestores culturales','Administradores de espacios','Equipos de mantenimiento']},
-{label:'Instituciones y soporte',color:'#8f9df5',names:['Alcaldía local','Planeación distrital','Autoridad ambiental','Jardín Botánico','Servicios de agua','Servicios de aseo','Salud pública','Gestión del riesgo','Propietarios del suelo','Organizaciones financiadoras']},
-{label:'No humanos y entorno',color:'#ef6f6f',names:['Árboles existentes','Aves urbanas','Polinizadores','Hongos descomponedores','Microorganismos del suelo','Vegetación de humedal','Agua lluvia','Suelos','Materia orgánica','Corredores ecológicos']}
+
+/* =========================================================================
+   KENNEDY 2030 - RED TERRITORIAL MULTIESCALAR (MODELO MODELAMIENTO2)
+   Basado en la arquitectura visual de https://anasoficasca-code.github.io/modelamiento2/index.html
+   50 nodos categorizados, 5 hubs articuladores y relaciones de trabajo hipotéticas
+   ========================================================================= */
+
+(function initKennedyNetwork() {
+  const NETWORKS = {
+  "comunidad": {
+    "title": "Comunidad · Juntas de acción comunal",
+    "count": 10,
+    "accent": "green",
+    "color": "#2fbfae",
+    "community": "Comunidad",
+    "hubId": "N02",
+    "nodes": [
+      {
+        "id": "N02",
+        "label": [
+          "Juntas de",
+          "acción comunal"
+        ],
+        "fullName": "Juntas de acción comunal",
+        "icon": "fa-handshake",
+        "emoji": "🤝",
+        "x": 390,
+        "y": 280,
+        "r": 54,
+        "primary": true,
+        "boost": 1.55,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N01",
+        "label": [
+          "Residentes del",
+          "barrio"
+        ],
+        "fullName": "Residentes del barrio",
+        "icon": "fa-house-chimney-window",
+        "emoji": "🏘️",
+        "x": 390,
+        "y": 71,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N03",
+        "label": [
+          "Liderazgos",
+          "juveniles"
+        ],
+        "fullName": "Liderazgos juveniles",
+        "icon": "fa-users",
+        "emoji": "👥",
+        "x": 506,
+        "y": 141,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N04",
+        "label": [
+          "Personas",
+          "mayores"
+        ],
+        "fullName": "Personas mayores",
+        "icon": "fa-person-cane",
+        "emoji": "👵",
+        "x": 596,
+        "y": 244,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N05",
+        "label": [
+          "Mujeres",
+          "cuidadoras"
+        ],
+        "fullName": "Mujeres cuidadoras",
+        "icon": "fa-heart",
+        "emoji": "💜",
+        "x": 547,
+        "y": 371,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N06",
+        "label": [
+          "Familias",
+          "participantes"
+        ],
+        "fullName": "Familias participantes",
+        "icon": "fa-people-roof",
+        "emoji": "👨‍👩‍👧",
+        "x": 461,
+        "y": 476,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N07",
+        "label": [
+          "Colectivos",
+          "ambientales"
+        ],
+        "fullName": "Colectivos ambientales",
+        "icon": "fa-seedling",
+        "emoji": "🌱",
+        "x": 328,
+        "y": 450,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N08",
+        "label": [
+          "Comités de",
+          "convivencia"
+        ],
+        "fullName": "Comités de convivencia",
+        "icon": "fa-scale-balanced",
+        "emoji": "⚖️",
+        "x": 209,
+        "y": 385,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N09",
+        "label": [
+          "Voluntariado",
+          "barrial"
+        ],
+        "fullName": "Voluntariado barrial",
+        "icon": "fa-hand-holding-hand",
+        "emoji": "🙋",
+        "x": 212,
+        "y": 249,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N10",
+        "label": [
+          "Veedurías",
+          "ciudadanas"
+        ],
+        "fullName": "Veedurías ciudadanas",
+        "icon": "fa-magnifying-glass",
+        "emoji": "🔎",
+        "x": 256,
+        "y": 120,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "participación y representación",
+        "dimension": "Social",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      }
+    ],
+    "edges": [
+      {
+        "from": "N02",
+        "to": "N01",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Residentes del barrio.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N03",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Liderazgos juveniles.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N04",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Personas mayores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N05",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Mujeres cuidadoras.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N06",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Familias participantes.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N07",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Colectivos ambientales.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N08",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Comités de convivencia.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N09",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Voluntariado barrial.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N10",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Convocatoria",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Convocatoria · Social",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Juntas de acción comunal articulando con Veedurías ciudadanas.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N01",
+        "to": "N02",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Residentes del barrio y Juntas de acción comunal.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N02",
+        "to": "N03",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Juntas de acción comunal y Liderazgos juveniles.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N03",
+        "to": "N04",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Liderazgos juveniles y Personas mayores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N04",
+        "to": "N05",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Personas mayores y Mujeres cuidadoras.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N05",
+        "to": "N06",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Mujeres cuidadoras y Familias participantes.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N06",
+        "to": "N07",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Familias participantes y Colectivos ambientales.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N07",
+        "to": "N08",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Colectivos ambientales y Comités de convivencia.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N08",
+        "to": "N09",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Comités de convivencia y Voluntariado barrial.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N09",
+        "to": "N10",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Social",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Voluntariado barrial y Veedurías ciudadanas.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      }
+    ]
+  },
+  "produccion": {
+    "title": "Producción y comercio · Huerteros urbanos",
+    "count": 10,
+    "accent": "yellow",
+    "color": "#eab04c",
+    "community": "Producción y comercio",
+    "hubId": "N11",
+    "nodes": [
+      {
+        "id": "N11",
+        "label": [
+          "Huerteros",
+          "urbanos"
+        ],
+        "fullName": "Huerteros urbanos",
+        "icon": "fa-seedling",
+        "emoji": "🪴",
+        "x": 390,
+        "y": 280,
+        "r": 54,
+        "primary": true,
+        "boost": 1.55,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N12",
+        "label": [
+          "Agricultores",
+          "periurbanos"
+        ],
+        "fullName": "Agricultores periurbanos",
+        "icon": "fa-tractor",
+        "emoji": "🚜",
+        "x": 390,
+        "y": 71,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N13",
+        "label": [
+          "Vendedores de",
+          "plaza"
+        ],
+        "fullName": "Vendedores de plaza",
+        "icon": "fa-carrot",
+        "emoji": "🥬",
+        "x": 506,
+        "y": 141,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N14",
+        "label": [
+          "Tenderos"
+        ],
+        "fullName": "Tenderos",
+        "icon": "fa-shop",
+        "emoji": "🏪",
+        "x": 596,
+        "y": 244,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N15",
+        "label": [
+          "Comerciantes de",
+          "Corabastos"
+        ],
+        "fullName": "Comerciantes de Corabastos",
+        "icon": "fa-boxes-packing",
+        "emoji": "📦",
+        "x": 547,
+        "y": 371,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N16",
+        "label": [
+          "Transportadores"
+        ],
+        "fullName": "Transportadores",
+        "icon": "fa-truck",
+        "emoji": "🚚",
+        "x": 461,
+        "y": 476,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N17",
+        "label": [
+          "Recicladores de",
+          "oficio"
+        ],
+        "fullName": "Recicladores de oficio",
+        "icon": "fa-recycle",
+        "emoji": "♻️",
+        "x": 328,
+        "y": 450,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N18",
+        "label": [
+          "Gestores de",
+          "compostaje"
+        ],
+        "fullName": "Gestores de compostaje",
+        "icon": "fa-recycle",
+        "emoji": "🍂",
+        "x": 209,
+        "y": 385,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N19",
+        "label": [
+          "Cocinas",
+          "comunitarias"
+        ],
+        "fullName": "Cocinas comunitarias",
+        "icon": "fa-utensils",
+        "emoji": "🍲",
+        "x": 212,
+        "y": 249,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N20",
+        "label": [
+          "Consumidores",
+          "locales"
+        ],
+        "fullName": "Consumidores locales",
+        "icon": "fa-cart-shopping",
+        "emoji": "🛒",
+        "x": 256,
+        "y": 120,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "producción e intercambio",
+        "dimension": "Socioeconómica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      }
+    ],
+    "edges": [
+      {
+        "from": "N11",
+        "to": "N12",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Agricultores periurbanos.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N13",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Vendedores de plaza.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N14",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Tenderos.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N15",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Comerciantes de Corabastos.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N16",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Transportadores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N17",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Recicladores de oficio.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N18",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Gestores de compostaje.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N19",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Cocinas comunitarias.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N20",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Intercambio",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Intercambio · Socioeconómica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Huerteros urbanos articulando con Consumidores locales.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N11",
+        "to": "N12",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Huerteros urbanos y Agricultores periurbanos.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N12",
+        "to": "N13",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Agricultores periurbanos y Vendedores de plaza.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N13",
+        "to": "N14",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Vendedores de plaza y Tenderos.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N14",
+        "to": "N15",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Tenderos y Comerciantes de Corabastos.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N15",
+        "to": "N16",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Comerciantes de Corabastos y Transportadores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N16",
+        "to": "N17",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Transportadores y Recicladores de oficio.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N17",
+        "to": "N18",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Recicladores de oficio y Gestores de compostaje.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N18",
+        "to": "N19",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Gestores de compostaje y Cocinas comunitarias.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N19",
+        "to": "N20",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioeconómica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Cocinas comunitarias y Consumidores locales.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      }
+    ]
+  },
+  "formacion": {
+    "title": "Formación y gestión · Universidades",
+    "count": 10,
+    "accent": "blue",
+    "color": "#ef8b3c",
+    "community": "Formación y gestión",
+    "hubId": "N23",
+    "nodes": [
+      {
+        "id": "N23",
+        "label": [
+          "Universidades"
+        ],
+        "fullName": "Universidades",
+        "icon": "fa-graduation-cap",
+        "emoji": "🎓",
+        "x": 390,
+        "y": 280,
+        "r": 54,
+        "primary": true,
+        "boost": 1.55,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N21",
+        "label": [
+          "Docentes"
+        ],
+        "fullName": "Docentes",
+        "icon": "fa-chalkboard-user",
+        "emoji": "👩‍🏫",
+        "x": 390,
+        "y": 71,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N22",
+        "label": [
+          "Estudiantes"
+        ],
+        "fullName": "Estudiantes",
+        "icon": "fa-book-open",
+        "emoji": "🎒",
+        "x": 506,
+        "y": 141,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N24",
+        "label": [
+          "Colegios"
+        ],
+        "fullName": "Colegios",
+        "icon": "fa-school",
+        "emoji": "🏫",
+        "x": 596,
+        "y": 244,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N25",
+        "label": [
+          "Investigadores"
+        ],
+        "fullName": "Investigadores",
+        "icon": "fa-microscope",
+        "emoji": "🔬",
+        "x": 547,
+        "y": 371,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N26",
+        "label": [
+          "Diseñadores"
+        ],
+        "fullName": "Diseñadores",
+        "icon": "fa-compass-drafting",
+        "emoji": "📐",
+        "x": 461,
+        "y": 476,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N27",
+        "label": [
+          "Facilitadores",
+          "comunitarios"
+        ],
+        "fullName": "Facilitadores comunitarios",
+        "icon": "fa-comments",
+        "emoji": "🗣️",
+        "x": 328,
+        "y": 450,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N28",
+        "label": [
+          "Gestores",
+          "culturales"
+        ],
+        "fullName": "Gestores culturales",
+        "icon": "fa-masks-theater",
+        "emoji": "🎭",
+        "x": 209,
+        "y": 385,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N29",
+        "label": [
+          "Administradores de",
+          "espacios"
+        ],
+        "fullName": "Administradores de espacios",
+        "icon": "fa-key",
+        "emoji": "🗝️",
+        "x": 212,
+        "y": 249,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N30",
+        "label": [
+          "Equipos de",
+          "mantenimiento"
+        ],
+        "fullName": "Equipos de mantenimiento",
+        "icon": "fa-screwdriver-wrench",
+        "emoji": "🛠️",
+        "x": 256,
+        "y": 120,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "aprendizaje y gestión",
+        "dimension": "Espacial",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      }
+    ],
+    "edges": [
+      {
+        "from": "N23",
+        "to": "N21",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Docentes.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N22",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Estudiantes.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N24",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Colegios.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N25",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Investigadores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N26",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Diseñadores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N27",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Facilitadores comunitarios.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N28",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Gestores culturales.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N29",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Administradores de espacios.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N30",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Formación",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Formación · Espacial",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Universidades articulando con Equipos de mantenimiento.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N21",
+        "to": "N22",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Docentes y Estudiantes.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N22",
+        "to": "N23",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Estudiantes y Universidades.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N23",
+        "to": "N24",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Universidades y Colegios.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N24",
+        "to": "N25",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Colegios y Investigadores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N25",
+        "to": "N26",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Investigadores y Diseñadores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N26",
+        "to": "N27",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Diseñadores y Facilitadores comunitarios.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N27",
+        "to": "N28",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Facilitadores comunitarios y Gestores culturales.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N28",
+        "to": "N29",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Gestores culturales y Administradores de espacios.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N29",
+        "to": "N30",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Espacial",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Administradores de espacios y Equipos de mantenimiento.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      }
+    ]
+  },
+  "instituciones": {
+    "title": "Instituciones y soporte · Alcaldía local",
+    "count": 10,
+    "accent": "purple",
+    "color": "#b784f4",
+    "community": "Instituciones y soporte",
+    "hubId": "N31",
+    "nodes": [
+      {
+        "id": "N31",
+        "label": [
+          "Alcaldía",
+          "local"
+        ],
+        "fullName": "Alcaldía local",
+        "icon": "fa-landmark",
+        "emoji": "🏛️",
+        "x": 390,
+        "y": 280,
+        "r": 54,
+        "primary": true,
+        "boost": 1.55,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N32",
+        "label": [
+          "Planeación",
+          "distrital"
+        ],
+        "fullName": "Planeación distrital",
+        "icon": "fa-map-location-dot",
+        "emoji": "🗺️",
+        "x": 390,
+        "y": 71,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N33",
+        "label": [
+          "Autoridad",
+          "ambiental"
+        ],
+        "fullName": "Autoridad ambiental",
+        "icon": "fa-leaf",
+        "emoji": "🌿",
+        "x": 506,
+        "y": 141,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N34",
+        "label": [
+          "Jardín",
+          "Botánico"
+        ],
+        "fullName": "Jardín Botánico",
+        "icon": "fa-tree",
+        "emoji": "🌳",
+        "x": 596,
+        "y": 244,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N35",
+        "label": [
+          "Servicios de",
+          "agua"
+        ],
+        "fullName": "Servicios de agua",
+        "icon": "fa-droplet",
+        "emoji": "💧",
+        "x": 547,
+        "y": 371,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N36",
+        "label": [
+          "Servicios de",
+          "aseo"
+        ],
+        "fullName": "Servicios de aseo",
+        "icon": "fa-truck-pickup",
+        "emoji": "🚛",
+        "x": 461,
+        "y": 476,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N37",
+        "label": [
+          "Salud",
+          "pública"
+        ],
+        "fullName": "Salud pública",
+        "icon": "fa-hospital",
+        "emoji": "🏥",
+        "x": 328,
+        "y": 450,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N38",
+        "label": [
+          "Gestión del",
+          "riesgo"
+        ],
+        "fullName": "Gestión del riesgo",
+        "icon": "fa-triangle-exclamation",
+        "emoji": "⚠️",
+        "x": 209,
+        "y": 385,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N39",
+        "label": [
+          "Propietarios del",
+          "suelo"
+        ],
+        "fullName": "Propietarios del suelo",
+        "icon": "fa-location-dot",
+        "emoji": "📍",
+        "x": 212,
+        "y": 249,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N40",
+        "label": [
+          "Organizaciones",
+          "financiadoras"
+        ],
+        "fullName": "Organizaciones financiadoras",
+        "icon": "fa-coins",
+        "emoji": "💰",
+        "x": 256,
+        "y": 120,
+        "r": 34,
+        "primary": false,
+        "type": "Humano / organización",
+        "role": "decisiones recursos y soporte",
+        "dimension": "Sociopolítica",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      }
+    ],
+    "edges": [
+      {
+        "from": "N31",
+        "to": "N32",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Planeación distrital.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N33",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Autoridad ambiental.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N34",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Jardín Botánico.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N35",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Servicios de agua.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N36",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Servicios de aseo.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N37",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Salud pública.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N38",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Gestión del riesgo.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N39",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Propietarios del suelo.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N40",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Decisión / gestión",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Decisión / gestión · Sociopolítica",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Alcaldía local articulando con Organizaciones financiadoras.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N31",
+        "to": "N32",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Alcaldía local y Planeación distrital.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N32",
+        "to": "N33",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Planeación distrital y Autoridad ambiental.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N33",
+        "to": "N34",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Autoridad ambiental y Jardín Botánico.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N34",
+        "to": "N35",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Jardín Botánico y Servicios de agua.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N35",
+        "to": "N36",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Servicios de agua y Servicios de aseo.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N36",
+        "to": "N37",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Servicios de aseo y Salud pública.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N37",
+        "to": "N38",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Salud pública y Gestión del riesgo.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N38",
+        "to": "N39",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Gestión del riesgo y Propietarios del suelo.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N39",
+        "to": "N40",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Sociopolítica",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Propietarios del suelo y Organizaciones financiadoras.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      }
+    ]
+  },
+  "entorno": {
+    "title": "No humanos y entorno · Árboles existentes",
+    "count": 10,
+    "accent": "coral",
+    "color": "#34d399",
+    "community": "No humanos y entorno",
+    "hubId": "N41",
+    "nodes": [
+      {
+        "id": "N41",
+        "label": [
+          "Árboles",
+          "existentes"
+        ],
+        "fullName": "Árboles existentes",
+        "icon": "fa-tree",
+        "emoji": "🌲",
+        "x": 390,
+        "y": 280,
+        "r": 54,
+        "primary": true,
+        "boost": 1.55,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N42",
+        "label": [
+          "Aves",
+          "urbanas"
+        ],
+        "fullName": "Aves urbanas",
+        "icon": "fa-dove",
+        "emoji": "🐦",
+        "x": 390,
+        "y": 71,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N43",
+        "label": [
+          "Polinizadores"
+        ],
+        "fullName": "Polinizadores",
+        "icon": "fa-bug",
+        "emoji": "🐝",
+        "x": 506,
+        "y": 141,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N44",
+        "label": [
+          "Hongos",
+          "descomponedores"
+        ],
+        "fullName": "Hongos descomponedores",
+        "icon": "fa-cloud",
+        "emoji": "🍄",
+        "x": 596,
+        "y": 244,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N45",
+        "label": [
+          "Microorganismos del",
+          "suelo"
+        ],
+        "fullName": "Microorganismos del suelo",
+        "icon": "fa-virus",
+        "emoji": "🦠",
+        "x": 547,
+        "y": 371,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N46",
+        "label": [
+          "Vegetación de",
+          "humedal"
+        ],
+        "fullName": "Vegetación de humedal",
+        "icon": "fa-wheat-awn",
+        "emoji": "🌾",
+        "x": 461,
+        "y": 476,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N47",
+        "label": [
+          "Agua",
+          "lluvia"
+        ],
+        "fullName": "Agua lluvia",
+        "icon": "fa-cloud-showers-heavy",
+        "emoji": "🌧️",
+        "x": 328,
+        "y": 450,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N48",
+        "label": [
+          "Suelos"
+        ],
+        "fullName": "Suelos",
+        "icon": "fa-mountain",
+        "emoji": "🟫",
+        "x": 209,
+        "y": 385,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N49",
+        "label": [
+          "Materia",
+          "orgánica"
+        ],
+        "fullName": "Materia orgánica",
+        "icon": "fa-feather",
+        "emoji": "🍃",
+        "x": 212,
+        "y": 249,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      },
+      {
+        "id": "N50",
+        "label": [
+          "Corredores",
+          "ecológicos"
+        ],
+        "fullName": "Corredores ecológicos",
+        "icon": "fa-network-wired",
+        "emoji": "🌐",
+        "x": 256,
+        "y": 120,
+        "r": 34,
+        "primary": false,
+        "type": "No humano / componente",
+        "role": "interdependencia ecológica",
+        "dimension": "Socioambiental",
+        "notes": "No atribuir acciones o compromisos sin evidencia"
+      }
+    ],
+    "edges": [
+      {
+        "from": "N41",
+        "to": "N42",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Aves urbanas.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N43",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Polinizadores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N44",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Hongos descomponedores.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N45",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Microorganismos del suelo.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N46",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Vegetación de humedal.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N47",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Agua lluvia.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N48",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Suelos.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N49",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Materia orgánica.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N50",
+        "kind": "soporte",
+        "directed": true,
+        "mechanism": "Cuidado ambiental",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Cuidado ambiental · Socioambiental",
+          "parcial": true,
+          "cita": "Conexión sugerida para estudiar, no vínculo comprobado. Árboles existentes articulando con Corredores ecológicos.",
+          "observacion": "No atribuir acciones o compromisos sin evidencia"
+        }
+      },
+      {
+        "from": "N41",
+        "to": "N42",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Árboles existentes y Aves urbanas.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N42",
+        "to": "N43",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Aves urbanas y Polinizadores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N43",
+        "to": "N44",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Polinizadores y Hongos descomponedores.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N44",
+        "to": "N45",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Hongos descomponedores y Microorganismos del suelo.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N45",
+        "to": "N46",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Microorganismos del suelo y Vegetación de humedal.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N46",
+        "to": "N47",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Vegetación de humedal y Agua lluvia.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N47",
+        "to": "N48",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Agua lluvia y Suelos.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N48",
+        "to": "N49",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Suelos y Materia orgánica.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      },
+      {
+        "from": "N49",
+        "to": "N50",
+        "kind": "indirecta",
+        "dashed": true,
+        "directed": false,
+        "bidirectional": true,
+        "mechanism": "Colaboración potencial",
+        "sustento": {
+          "pagina": "Matriz Kennedy 2030",
+          "tipoLabel": "Colaboración potencial · Socioambiental",
+          "parcial": true,
+          "cita": "Vínculo potencial entre pares locales: Materia orgánica y Corredores ecológicos.",
+          "observacion": "Requiere validación directa con actores del territorio"
+        }
+      }
+    ]
+  }
+};
+  const ALL_NODES = [
+  {
+    "id": "N01",
+    "name": "Residentes del barrio",
+    "icon": "🏘️",
+    "faIcon": "fa-house-chimney-window",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N02",
+    "name": "Juntas de acción comunal",
+    "icon": "🤝",
+    "faIcon": "fa-handshake",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": true,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N03",
+    "name": "Liderazgos juveniles",
+    "icon": "👥",
+    "faIcon": "fa-users",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N04",
+    "name": "Personas mayores",
+    "icon": "👵",
+    "faIcon": "fa-person-cane",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N05",
+    "name": "Mujeres cuidadoras",
+    "icon": "💜",
+    "faIcon": "fa-heart",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N06",
+    "name": "Familias participantes",
+    "icon": "👨‍👩‍👧",
+    "faIcon": "fa-people-roof",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N07",
+    "name": "Colectivos ambientales",
+    "icon": "🌱",
+    "faIcon": "fa-seedling",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N08",
+    "name": "Comités de convivencia",
+    "icon": "⚖️",
+    "faIcon": "fa-scale-balanced",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N09",
+    "name": "Voluntariado barrial",
+    "icon": "🙋",
+    "faIcon": "fa-hand-holding-hand",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N10",
+    "name": "Veedurías ciudadanas",
+    "icon": "🔎",
+    "faIcon": "fa-magnifying-glass",
+    "community": "Comunidad",
+    "type": "Humano / organización",
+    "role": "participación y representación",
+    "dimension": "Social",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N11",
+    "name": "Huerteros urbanos",
+    "icon": "🪴",
+    "faIcon": "fa-seedling",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": true,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N12",
+    "name": "Agricultores periurbanos",
+    "icon": "🚜",
+    "faIcon": "fa-tractor",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N13",
+    "name": "Vendedores de plaza",
+    "icon": "🥬",
+    "faIcon": "fa-carrot",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N14",
+    "name": "Tenderos",
+    "icon": "🏪",
+    "faIcon": "fa-shop",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N15",
+    "name": "Comerciantes de Corabastos",
+    "icon": "📦",
+    "faIcon": "fa-boxes-packing",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N16",
+    "name": "Transportadores",
+    "icon": "🚚",
+    "faIcon": "fa-truck",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N17",
+    "name": "Recicladores de oficio",
+    "icon": "♻️",
+    "faIcon": "fa-recycle",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N18",
+    "name": "Gestores de compostaje",
+    "icon": "🍂",
+    "faIcon": "fa-recycle",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N19",
+    "name": "Cocinas comunitarias",
+    "icon": "🍲",
+    "faIcon": "fa-utensils",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N20",
+    "name": "Consumidores locales",
+    "icon": "🛒",
+    "faIcon": "fa-cart-shopping",
+    "community": "Producción y comercio",
+    "type": "Humano / organización",
+    "role": "producción e intercambio",
+    "dimension": "Socioeconómica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N21",
+    "name": "Docentes",
+    "icon": "👩‍🏫",
+    "faIcon": "fa-chalkboard-user",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N22",
+    "name": "Estudiantes",
+    "icon": "🎒",
+    "faIcon": "fa-book-open",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N23",
+    "name": "Universidades",
+    "icon": "🎓",
+    "faIcon": "fa-graduation-cap",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": true,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N24",
+    "name": "Colegios",
+    "icon": "🏫",
+    "faIcon": "fa-school",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N25",
+    "name": "Investigadores",
+    "icon": "🔬",
+    "faIcon": "fa-microscope",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N26",
+    "name": "Diseñadores",
+    "icon": "📐",
+    "faIcon": "fa-compass-drafting",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N27",
+    "name": "Facilitadores comunitarios",
+    "icon": "🗣️",
+    "faIcon": "fa-comments",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N28",
+    "name": "Gestores culturales",
+    "icon": "🎭",
+    "faIcon": "fa-masks-theater",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N29",
+    "name": "Administradores de espacios",
+    "icon": "🗝️",
+    "faIcon": "fa-key",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N30",
+    "name": "Equipos de mantenimiento",
+    "icon": "🛠️",
+    "faIcon": "fa-screwdriver-wrench",
+    "community": "Formación y gestión",
+    "type": "Humano / organización",
+    "role": "aprendizaje y gestión",
+    "dimension": "Espacial",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N31",
+    "name": "Alcaldía local",
+    "icon": "🏛️",
+    "faIcon": "fa-landmark",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": true,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N32",
+    "name": "Planeación distrital",
+    "icon": "🗺️",
+    "faIcon": "fa-map-location-dot",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N33",
+    "name": "Autoridad ambiental",
+    "icon": "🌿",
+    "faIcon": "fa-leaf",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N34",
+    "name": "Jardín Botánico",
+    "icon": "🌳",
+    "faIcon": "fa-tree",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N35",
+    "name": "Servicios de agua",
+    "icon": "💧",
+    "faIcon": "fa-droplet",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N36",
+    "name": "Servicios de aseo",
+    "icon": "🚛",
+    "faIcon": "fa-truck-pickup",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N37",
+    "name": "Salud pública",
+    "icon": "🏥",
+    "faIcon": "fa-hospital",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N38",
+    "name": "Gestión del riesgo",
+    "icon": "⚠️",
+    "faIcon": "fa-triangle-exclamation",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N39",
+    "name": "Propietarios del suelo",
+    "icon": "📍",
+    "faIcon": "fa-location-dot",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N40",
+    "name": "Organizaciones financiadoras",
+    "icon": "💰",
+    "faIcon": "fa-coins",
+    "community": "Instituciones y soporte",
+    "type": "Humano / organización",
+    "role": "decisiones recursos y soporte",
+    "dimension": "Sociopolítica",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N41",
+    "name": "Árboles existentes",
+    "icon": "🌲",
+    "faIcon": "fa-tree",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": true,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N42",
+    "name": "Aves urbanas",
+    "icon": "🐦",
+    "faIcon": "fa-dove",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N43",
+    "name": "Polinizadores",
+    "icon": "🐝",
+    "faIcon": "fa-bug",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N44",
+    "name": "Hongos descomponedores",
+    "icon": "🍄",
+    "faIcon": "fa-cloud",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N45",
+    "name": "Microorganismos del suelo",
+    "icon": "🦠",
+    "faIcon": "fa-virus",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N46",
+    "name": "Vegetación de humedal",
+    "icon": "🌾",
+    "faIcon": "fa-wheat-awn",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N47",
+    "name": "Agua lluvia",
+    "icon": "🌧️",
+    "faIcon": "fa-cloud-showers-heavy",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N48",
+    "name": "Suelos",
+    "icon": "🟫",
+    "faIcon": "fa-mountain",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N49",
+    "name": "Materia orgánica",
+    "icon": "🍃",
+    "faIcon": "fa-feather",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  },
+  {
+    "id": "N50",
+    "name": "Corredores ecológicos",
+    "icon": "🌐",
+    "faIcon": "fa-network-wired",
+    "community": "No humanos y entorno",
+    "type": "No humano / componente",
+    "role": "interdependencia ecológica",
+    "dimension": "Socioambiental",
+    "visible": true,
+    "isHub": false,
+    "evidence": "Hipótesis / por validar",
+    "source": "",
+    "notes": "No atribuir acciones o compromisos sin evidencia"
+  }
 ];
-const nodes=[];groups.forEach((g,gi)=>g.names.forEach((name,j)=>{nodes.push({id:nodes.length,name,group:g.label,color:g.color,x:90+gi*160,y:38+j*51})}));
-const hubs=[1,10,22,30,40];const pairs=[];const relationTypes=['convocatoria','intercambio','formación','acuerdos de uso','cuidado ambiental'];for(let gi=0;gi<5;gi++){for(let j=0;j<10;j++){let id=gi*10+j;if(id!==hubs[gi])pairs.push({a:hubs[gi],b:id,type:relationTypes[gi],hub:false})}}for(let gi=0;gi<5;gi++)pairs.push({a:hubs[gi],b:hubs[(gi+1)%5],type:'coordinación entre hubs',hub:true});for(let gi=0;gi<5;gi++)for(let j=0;j<9;j++)pairs.push({a:gi*10+j,b:gi*10+j+1,type:'colaboración potencial',hub:false});
-const svg=document.getElementById('socialGraph'),info=document.getElementById('socialInfo');if(!svg)return;const NS='http://www.w3.org/2000/svg';function el(tag,attrs,parent){let e=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));parent.appendChild(e);return e}
-const edgeLayer=el('g',{},svg),nodeLayer=el('g',{},svg);let visible=0,selected=-1,focus=-1;
-const edges=pairs.map((p,i)=>{const a=nodes[p.a],b=nodes[p.b];let e=el('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:'#2fbfae', 'stroke-width':1.1,opacity:.32,'stroke-dasharray':p.hub?'7 5':'none'},edgeLayer);e.style.display='none';return e});
-const nodeIcons=['🏘️','🤝','🧑‍🤝‍🧑','👵','💜','👨‍👩‍👧','🌱','⚖️','🙋','🔎','🪴','🚜','🥬','🏪','📦','🚚','♻️','🍂','🍲','🛒','👩‍🏫','🎒','🎓','🏫','🔬','📐','🗣️','🎭','🗝️','🛠️','🏛️','🗺️','🌿','🌳','💧','🚛','🏥','⚠️','📍','💰','🌲','🐦','🐝','🍄','🦠','🌾','🌧️','🟫','🍃','🌐'];
-const dots=nodes.map((n,i)=>{const hub=hubs.includes(i);let g=el('g',{role:'button',tabindex:'0','aria-label':n.name,style:'cursor:pointer'},nodeLayer);
-el('rect',{x:n.x-69,y:n.y-19,width:138,height:38,rx:hub?19:11,fill:hub?'#213c42':'#18242a',stroke:n.color,'stroke-width':hub?2.8:1.3},g);let icon=el('text',{x:n.x-54,y:n.y+5,'font-size':17,'text-anchor':'middle','pointer-events':'none'},g);icon.textContent=nodeIcons[i];
-let t=el('text',{x:n.x+9,y:n.y+2,'text-anchor':'middle',fill:'#ffffff','font-size':n.name.length>23?7.8:n.name.length>17?8.5:9.5,'font-family':'Inter,Arial,sans-serif','font-weight':hub?'750':'550','pointer-events':'none'},g);
-const words=n.name.split(' ');let lines=[''];words.forEach(w=>{let last=lines.length-1;if((lines[last]+' '+w).trim().length>20&&lines.length<2)lines.push(w);else lines[last]=(lines[last]+' '+w).trim()});t.textContent='';lines.forEach((line,k)=>{let span=el('tspan',{x:n.x+9,dy:k===0?0:12},t);span.textContent=line});if(lines.length===2)t.setAttribute('y',n.y-5);
-let title=el('title',{},g);title.textContent=n.name;g.addEventListener('click',()=>choose(i));g.addEventListener('dblclick',e=>{e.preventDefault();enter(i)});g.addEventListener('keydown',e=>{if(e.key==='Enter'){if(e.shiftKey)enter(i);else choose(i)}});return g});
-function paint(){edges.forEach((e,i)=>{const p=pairs[i];let inFocus=focus<0||p.a===focus||p.b===focus||(hubs.includes(focus)&&Math.floor(p.a/10)===Math.floor(focus/10)&&Math.floor(p.b/10)===Math.floor(focus/10));e.style.display=i<visible&&inFocus?'':'none';e.setAttribute('opacity',selected<0?.5:(p.a===selected||p.b===selected?.95:.12));e.setAttribute('stroke',p.hub?'#f4ba62':'#55cfc5');e.setAttribute('stroke-width',p.hub?2.4:1.2)});dots.forEach((g,i)=>{let near=focus<0||i===focus||pairs.some(p=>(p.a===focus&&p.b===i)||(p.b===focus&&p.a===i))||(hubs.includes(focus)&&Math.floor(i/10)===Math.floor(focus/10));g.style.display=near?'':'none';g.setAttribute('opacity',selected<0||selected===i||pairs.some(p=>(p.a===selected&&p.b===i)||(p.b===selected&&p.a===i))?1:.3);g.querySelector('rect').setAttribute('stroke-width',i===selected?4:hubs.includes(i)?2.8:1.3)});document.getElementById('socialCount').textContent=visible+' de '+pairs.length+' conexiones · '+(focus<0?'Vista general':'Subred seleccionada');document.getElementById('socialBack').style.display=focus<0?'none':'inline-block'}
-function enter(i){focus=i;selected=i;visible=pairs.length;paint();const n=nodes[i];const connected=pairs.filter(p=>p.a===i||p.b===i).map(p=>nodes[p.a===i?p.b:p.a].name);info.querySelector('h3').textContent='Subred · '+n.name;info.querySelector('p').textContent='Doble clic: exploración de '+n.group+'. Conexiones propuestas con: '+connected.join(', ')+'. Son vínculos por validar con los actores reales.'}
-function choose(i){selected=i;visible=pairs.length;paint();const n=nodes[i];const connections=pairs.filter(p=>p.a===i||p.b===i).map(p=>nodes[p.a===i?p.b:p.a].name+' · '+p.type);info.querySelector('h3').textContent=n.name;info.querySelector('p').textContent='Grupo: '+n.group+'. Relaciones de trabajo hipotéticas: '+connections.join('; ')+'.';}
-document.getElementById('socialAll').onclick=()=>{visible=pairs.length;selected=-1;focus=-1;paint()};document.getElementById('socialBack').onclick=()=>{focus=-1;selected=-1;visible=pairs.length;paint();info.querySelector('h3').textContent='50 nodos · 5 hubs';info.querySelector('p').textContent='Selecciona un nodo o haz doble clic para entrar a su subred.'};document.getElementById('socialNext').onclick=()=>{visible=Math.min(pairs.length,visible+1);paint()};paint();
-const slide=document.getElementById('socialNetworkSlide');let timer=null;new MutationObserver(()=>{if(slide.classList.contains('active')){visible=0;selected=-1;focus=-1;paint();clearInterval(timer);timer=setInterval(()=>{if(!slide.classList.contains('active')||visible>=pairs.length){clearInterval(timer);return}visible+=2;paint()},95)}else clearInterval(timer)}).observe(slide,{attributes:true,attributeFilter:['class']});
+
+  // Expose globally
+  window.KENNEDY_NETWORKS = NETWORKS;
+  window.KENNEDY_ALL_NODES = ALL_NODES;
+
+  const SVG_NS = "http://www.w3.org/2000/svg";
+
+  // Hub definitions for main pentagon view
+  const HUB_DEFS = {
+    comunidad: {
+      id: "N02",
+      hubKey: "comunidad",
+      cx: 340,
+      cy: 105,
+      r: 62,
+      label: ["Juntas de acción", "comunal (Comunidad)"],
+      icon: "fa-handshake",
+      color: "#2fbfae",
+      gradient: "grad-green",
+      accent: "green"
+    },
+    produccion: {
+      id: "N11",
+      hubKey: "produccion",
+      cx: 535,
+      cy: 245,
+      r: 62,
+      label: ["Huerteros urbanos", "(Producción y com.)"],
+      icon: "fa-seedling",
+      color: "#eab04c",
+      gradient: "grad-yellow",
+      accent: "yellow"
+    },
+    formacion: {
+      id: "N23",
+      hubKey: "formacion",
+      cx: 460,
+      cy: 470,
+      r: 62,
+      label: ["Universidades", "(Formación y gestión)"],
+      icon: "fa-graduation-cap",
+      color: "#ef8b3c",
+      gradient: "grad-blue",
+      accent: "blue"
+    },
+    instituciones: {
+      id: "N31",
+      hubKey: "instituciones",
+      cx: 220,
+      cy: 470,
+      r: 62,
+      label: ["Alcaldía local", "(Instituciones/soporte)"],
+      icon: "fa-landmark",
+      color: "#b784f4",
+      gradient: "grad-purple",
+      accent: "purple"
+    },
+    entorno: {
+      id: "N41",
+      hubKey: "entorno",
+      cx: 145,
+      cy: 245,
+      r: 62,
+      label: ["Árboles existentes", "(No humanos/entorno)"],
+      icon: "fa-tree",
+      color: "#34d399",
+      gradient: "grad-coral",
+      accent: "coral"
+    }
+  };
+
+  // Main hub-to-hub coordination and inter-community edges
+  const EDGE_DEFS = [
+    {
+      id: "e1",
+      from: "comunidad",
+      to: "produccion",
+      bow: { x: 30, y: -20 },
+      relation: "R046: Coordinación entre hubs",
+      quote: "Articulación entre la organización barrial (JAC) y los circuitos locales de siembra, plazas de mercado y compostaje.",
+      dimension: "Sociopolítica / Socioeconómica",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e2",
+      from: "produccion",
+      to: "formacion",
+      bow: { x: 35, y: 15 },
+      relation: "R047: Coordinación entre hubs",
+      quote: "Investigación aplicada, innovación agroecológica y pasantías universitarias vinculadas a la red de huerteros.",
+      dimension: "Sociopolítica / Espacial",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e3",
+      from: "formacion",
+      to: "instituciones",
+      bow: { x: 0, y: 35 },
+      relation: "R048: Coordinación entre hubs",
+      quote: "Convenios técnico-científicos entre la academia y la Alcaldía Local / Planeación para evaluación y formulación de proyectos.",
+      dimension: "Sociopolítica / Institucional",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e4",
+      from: "instituciones",
+      to: "entorno",
+      bow: { x: -35, y: 15 },
+      relation: "R049: Coordinación entre hubs",
+      quote: "Políticas de manejo silvicultural, declaratoria de reservas y preservación del arbolado urbano con Secretaría de Ambiente.",
+      dimension: "Sociopolítica / Socioambiental",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e5",
+      from: "entorno",
+      to: "comunidad",
+      bow: { x: -30, y: -20 },
+      relation: "R050: Coordinación entre hubs",
+      quote: "Apropiación ciudadana, voluntariado de cuidado del bosque urbano y pactos vecinales de convivencia ecológica.",
+      dimension: "Socioambiental / Social",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e6",
+      from: "comunidad",
+      to: "formacion",
+      bow: { x: 15, y: -10 },
+      relation: "Acuerdos Formativos Comunitarios",
+      quote: "Talleres comunitarios, escuelas de liderazgo barrial y formación participativa abierta.",
+      dimension: "Social / Espacial",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e7",
+      from: "comunidad",
+      to: "instituciones",
+      bow: { x: -15, y: -10 },
+      relation: "Presupuestos Participativos y Cabildos",
+      quote: "Mesas locales de concertación ciudadana y veedurías sobre inversiones territoriales.",
+      dimension: "Sociopolítica",
+      evidencia: "Hipótesis / por validar"
+    },
+    {
+      id: "e8",
+      from: "produccion",
+      to: "entorno",
+      bow: { x: 0, y: -25 },
+      relation: "Regeneración de Suelos y Biomasa",
+      quote: "Aprovechamiento de biomasa, polinizadores y abonos orgánicos en ciclos agroecológicos.",
+      dimension: "Socioambiental / Económica",
+      evidencia: "Hipótesis / por validar"
+    }
+  ];
+
+  const mainSvg = document.getElementById("kennedy-network-svg");
+  const mainLinksG = document.getElementById("kennedy-main-links");
+  const mainNodesG = document.getElementById("kennedy-main-nodes");
+  if (!mainSvg || !mainLinksG || !mainNodesG) return;
+
+  function el(tag, attrs) {
+    const node = document.createElementNS(SVG_NS, tag);
+    Object.keys(attrs || {}).forEach((k) => node.setAttribute(k, attrs[k]));
+    return node;
+  }
+
+  // -------------------------------------------------------------
+  // 1. RENDER MAIN HUB DIAGRAM (SVG)
+  // -------------------------------------------------------------
+  mainLinksG.innerHTML = "";
+  mainNodesG.innerHTML = "";
+
+  EDGE_DEFS.forEach((e) => {
+    const g = el("g", {
+      class: "link",
+      "data-relation": e.id,
+      tabindex: "0",
+      role: "button",
+      "aria-label": `Relación ${e.relation}`
+    });
+    const hit = el("path", { class: "link-hit" });
+    const line = el("path", { class: "link-line" });
+    const arrow = el("path", { class: "link-arrow", d: "M-14,-5 L0,0 L-14,5 Z" });
+
+    g.appendChild(hit);
+    g.appendChild(line);
+    g.appendChild(arrow);
+    mainLinksG.appendChild(g);
+  });
+
+  const hubIds = Object.keys(HUB_DEFS);
+  hubIds.forEach((key) => {
+    const hub = HUB_DEFS[key];
+    const g = el("g", {
+      class: `node node-${key}`,
+      "data-node": key,
+      transform: `translate(${hub.cx},${hub.cy})`
+    });
+
+    const floatG = el("g", { class: "node-float" });
+    const circle = el("circle", { r: hub.r });
+    floatG.appendChild(circle);
+
+    // FontAwesome Icon in foreignObject
+    const iconSize = 22;
+    const fo = el("foreignObject", {
+      x: -iconSize / 2,
+      y: -(hub.r * 0.58),
+      width: iconSize,
+      height: iconSize,
+      style: "pointer-events:none;overflow:visible;"
+    });
+    const div = document.createElement("div");
+    div.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+    div.style.cssText = "width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:18px;";
+    div.innerHTML = `<i class="fa-solid ${hub.icon}"></i>`;
+    fo.appendChild(div);
+    floatG.appendChild(fo);
+
+    // Labels
+    const text = el("text", { y: -(hub.r * 0.15) });
+    hub.label.forEach((lineText, idx) => {
+      const span = el("tspan", { x: 0, dy: idx === 0 ? 0 : 13 });
+      span.textContent = lineText;
+      text.appendChild(span);
+    });
+    floatG.appendChild(text);
+
+    g.appendChild(floatG);
+    mainNodesG.appendChild(g);
+  });
+
+  // -------------------------------------------------------------
+  // 2. DRAG & SPRING PHYSICS (Inspirado en modelamiento2)
+  // -------------------------------------------------------------
+  let physicsRunning = false;
+  const K_HOME = 36;
+  const K_EDGE = 14;
+  const DAMPING = 8.5;
+  const SETTLE_EPS = 0.15;
+
+  const state = {};
+  hubIds.forEach((id) => {
+    const def = HUB_DEFS[id];
+    state[id] = {
+      x: def.cx,
+      y: def.cy,
+      vx: 0,
+      vy: 0,
+      dragging: false
+    };
+  });
+
+  const pairs = [];
+  EDGE_DEFS.forEach((e) => {
+    const nA = HUB_DEFS[e.from], nB = HUB_DEFS[e.to];
+    pairs.push({
+      a: e.from,
+      b: e.to,
+      rest: Math.hypot(nB.cx - nA.cx, nB.cy - nA.cy)
+    });
+  });
+
+  function toSvgPoint(evt) {
+    const pt = mainSvg.createSVGPoint();
+    pt.x = evt.clientX;
+    pt.y = evt.clientY;
+    const ctm = mainSvg.getScreenCTM();
+    if (!ctm) return { x: pt.x, y: pt.y };
+    return pt.matrixTransform(ctm.inverse());
+  }
+
+  function updateNodeTransform(id) {
+    const g = mainSvg.querySelector(`[data-node="${id}"]`);
+    if (!g) return;
+    const s = state[id];
+    g.setAttribute("transform", `translate(${s.x.toFixed(2)},${s.y.toFixed(2)})`);
+  }
+
+  function updateEdge(edge) {
+    const g = mainSvg.querySelector(`.link[data-relation="${edge.id}"]`);
+    if (!g) return;
+    const nA = HUB_DEFS[edge.from], nB = HUB_DEFS[edge.to];
+    const A = state[edge.from], B = state[edge.to];
+    let ux = B.x - A.x, uy = B.y - A.y;
+    const dist = Math.hypot(ux, uy) || 1;
+    ux /= dist;
+    uy /= dist;
+
+    const P0 = { x: A.x + ux * nA.r, y: A.y + uy * nA.r };
+    const P1 = { x: B.x - ux * nB.r, y: B.y - uy * nB.r };
+    const mid = { x: (P0.x + P1.x) / 2, y: (P0.y + P1.y) / 2 };
+    const C = { x: mid.x + edge.bow.x, y: mid.y + edge.bow.y };
+
+    const d = `M${P0.x.toFixed(1)},${P0.y.toFixed(1)} Q${C.x.toFixed(1)},${C.y.toFixed(1)} ${P1.x.toFixed(1)},${P1.y.toFixed(1)}`;
+    const line = g.querySelector(".link-line");
+    const hit = g.querySelector(".link-hit");
+    const arrow = g.querySelector(".link-arrow");
+
+    if (line) line.setAttribute("d", d);
+    if (hit) hit.setAttribute("d", d);
+    if (arrow) {
+      const dx2 = 2 * (P1.x - C.x), dy2 = 2 * (P1.y - C.y);
+      const angle = (Math.atan2(dy2, dx2) * 180) / Math.PI;
+      arrow.setAttribute("transform", `translate(${P1.x.toFixed(1)},${P1.y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+    }
+  }
+
+  function updateAllEdges() {
+    EDGE_DEFS.forEach(updateEdge);
+  }
+
+  function stepPhysics(dt) {
+    const forces = {};
+    hubIds.forEach((id) => { forces[id] = { fx: 0, fy: 0 }; });
+
+    // 1. Resorte hacia posición de equilibrio
+    hubIds.forEach((id) => {
+      const n = HUB_DEFS[id], s = state[id];
+      forces[id].fx += K_HOME * (n.cx - s.x);
+      forces[id].fy += K_HOME * (n.cy - s.y);
+    });
+
+    // 2. Tensión entre hubs conectados
+    pairs.forEach(({ a, b, rest }) => {
+      const sa = state[a], sb = state[b];
+      const dx = sb.x - sa.x, dy = sb.y - sa.y;
+      const dist = Math.hypot(dx, dy) || 1;
+      const ux = dx / dist, uy = dy / dist;
+      const stretch = dist - rest;
+      const fx = K_EDGE * stretch * ux;
+      const fy = K_EDGE * stretch * uy;
+      forces[a].fx += fx;
+      forces[a].fy += fy;
+      forces[b].fx -= fx;
+      forces[b].fy -= fy;
+    });
+
+    let anyMoving = false;
+    hubIds.forEach((id) => {
+      const s = state[id];
+      if (s.dragging) { anyMoving = true; return; }
+      const f = forces[id];
+      const ax = f.fx - DAMPING * s.vx;
+      const ay = f.fy - DAMPING * s.vy;
+      s.vx += ax * dt;
+      s.vy += ay * dt;
+      s.x += s.vx * dt;
+      s.y += s.vy * dt;
+      const n = HUB_DEFS[id];
+      const atHome = Math.abs(s.x - n.cx) < SETTLE_EPS && Math.abs(s.y - n.cy) < SETTLE_EPS;
+      const atRest = Math.abs(s.vx) < SETTLE_EPS && Math.abs(s.vy) < SETTLE_EPS;
+      if (atHome && atRest) {
+        s.x = n.cx;
+        s.y = n.cy;
+        s.vx = 0;
+        s.vy = 0;
+      } else {
+        anyMoving = true;
+      }
+      updateNodeTransform(id);
+    });
+
+    updateAllEdges();
+    return anyMoving;
+  }
+
+  let lastTime = 0;
+  function loop(ts) {
+    if (!lastTime) lastTime = ts;
+    const dt = Math.min((ts - lastTime) / 1000, 0.033);
+    lastTime = ts;
+    const draggingAny = hubIds.some((id) => state[id].dragging);
+    const moving = stepPhysics(dt);
+    if (draggingAny || moving) {
+      requestAnimationFrame(loop);
+    } else {
+      physicsRunning = false;
+      lastTime = 0;
+    }
+  }
+
+  function ensureLoop() {
+    if (!physicsRunning) {
+      physicsRunning = true;
+      lastTime = 0;
+      requestAnimationFrame(loop);
+    }
+  }
+
+  // Attach Drag Handlers to Hubs
+  hubIds.forEach((id) => {
+    const g = mainSvg.querySelector(`[data-node="${id}"]`);
+    if (!g) return;
+    let grabOffset = { x: 0, y: 0 };
+    let dragThreshold = 0;
+    let didMove = false;
+
+    function onPointerDown(e) {
+      if (e.button !== undefined && e.button !== 0) return;
+      g.setPointerCapture?.(e.pointerId);
+      const pt = toSvgPoint(e);
+      const s = state[id];
+      grabOffset = { x: pt.x - s.x, y: pt.y - s.y };
+      s.dragging = true;
+      s.vx = 0;
+      s.vy = 0;
+      didMove = false;
+      dragThreshold = 0;
+      g.classList.add("dragging");
+      window.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("pointerup", onPointerUp);
+      ensureLoop();
+    }
+
+    function onPointerMove(e) {
+      if (!state[id].dragging) return;
+      const pt = toSvgPoint(e);
+      state[id].x = pt.x - grabOffset.x;
+      state[id].y = pt.y - grabOffset.y;
+      dragThreshold += Math.hypot(e.movementX || 0, e.movementY || 0);
+      if (dragThreshold > 5) didMove = true;
+      updateNodeTransform(id);
+      updateAllEdges();
+    }
+
+    function onPointerUp(e) {
+      if (!state[id].dragging) return;
+      state[id].dragging = false;
+      g.classList.remove("dragging");
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
+      ensureLoop();
+
+      // If clicked without significant dragging -> Open Subnetwork Modal!
+      if (!didMove) {
+        openNetworkModal(id);
+      }
+    }
+
+    g.addEventListener("pointerdown", onPointerDown);
+  });
+
+  updateAllEdges();
+  ensureLoop();
+
+  document.getElementById("btnResetPhysics")?.addEventListener("click", () => {
+    hubIds.forEach((id) => {
+      const def = HUB_DEFS[id];
+      state[id].x = def.cx;
+      state[id].y = def.cy;
+      state[id].vx = 0;
+      state[id].vy = 0;
+    });
+    ensureLoop();
+  });
+
+  // -------------------------------------------------------------
+  // 3. POPUP DE RELACIONES ENTRE HUBS (.pot-popup)
+  // -------------------------------------------------------------
+  let activePopup = null;
+  function closePopup() {
+    if (activePopup) {
+      activePopup.remove();
+      activePopup = null;
+    }
+    mainSvg.querySelectorAll(".link.link-active").forEach((l) => l.classList.remove("link-active"));
+  }
+
+  function openRelationPopup(edgeId, clientX, clientY) {
+    closePopup();
+    const edge = EDGE_DEFS.find((e) => e.id === edgeId);
+    if (!edge) return;
+
+    const g = mainSvg.querySelector(`.link[data-relation="${edgeId}"]`);
+    if (g) g.classList.add("link-active");
+
+    const fromHub = HUB_DEFS[edge.from];
+    const toHub = HUB_DEFS[edge.to];
+
+    const pop = document.createElement("div");
+    pop.className = "pot-popup";
+    pop.innerHTML = `
+      <button class="pot-popup-close" type="button" aria-label="Cerrar">✕</button>
+      <div class="pot-relation">${edge.relation}</div>
+      <div style="font-size:12px;color:#2fd4c8;font-weight:700;margin-bottom:8px;">
+        ${fromHub.label.join(" ")} ➔ ${toHub.label.join(" ")}
+      </div>
+      <div class="pot-quote">"${edge.quote}"</div>
+      <div class="pot-page">
+        <span>Dimensión: ${edge.dimension}</span>
+        <span style="color:#f5c26b;">${edge.evidencia}</span>
+      </div>
+    `;
+
+    document.body.appendChild(pop);
+    activePopup = pop;
+
+    const rect = pop.getBoundingClientRect();
+    const pad = 16;
+    let top = clientY - rect.height - 12;
+    let left = clientX - rect.width / 2;
+
+    if (top < pad) top = clientY + 16;
+    if (left < pad) left = pad;
+    if (left + rect.width > window.innerWidth - pad) {
+      left = window.innerWidth - rect.width - pad;
+    }
+
+    pop.style.top = Math.round(top) + "px";
+    pop.style.left = Math.round(left) + "px";
+
+    pop.querySelector(".pot-popup-close").addEventListener("click", closePopup);
+  }
+
+  mainSvg.querySelectorAll(".link").forEach((g) => {
+    const relId = g.getAttribute("data-relation");
+    g.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openRelationPopup(relId, e.clientX, e.clientY);
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (activePopup && !activePopup.contains(e.target)) closePopup();
+  });
+
+  // -------------------------------------------------------------
+  // 4. SUBRED MODAL POPUP (Inspirado en modelamiento2)
+  // -------------------------------------------------------------
+  const overlay = document.getElementById("redes-modal-overlay");
+  const modalClose = overlay?.querySelector(".redes-modal-close");
+  const modalTitle = overlay?.querySelector("#redes-modal-title");
+  const modalSubtitle = overlay?.querySelector(".redes-modal-subtitle");
+  const modalSvg = overlay?.querySelector(".redes-network-svg");
+  const modalEdgesG = overlay?.querySelector(".redes-edges");
+  const modalNodesG = overlay?.querySelector(".redes-nodes");
+
+  let activeNetwork = null;
+  let activeSustentoPopup = null;
+
+  function closeSustentoPopup() {
+    if (activeSustentoPopup) {
+      activeSustentoPopup.remove();
+      activeSustentoPopup = null;
+    }
+  }
+
+  function openSustentoPopup(title, sustento, x, y) {
+    closeSustentoPopup();
+    if (!sustento) return;
+
+    const pop = document.createElement("div");
+    pop.className = "pot-popup";
+    pop.innerHTML = `
+      <button class="pot-popup-close" type="button" aria-label="Cerrar">✕</button>
+      <div class="pot-relation">${sustento.tipoLabel || "Vínculo Territorial"}</div>
+      <div style="font-size:12px;color:#2fd4c8;font-weight:700;margin-bottom:8px;">${title}</div>
+      <div class="pot-quote">"${sustento.cita}"</div>
+      <div class="pot-page">
+        <span>${sustento.pagina}</span>
+        <span style="color:#f5c26b;">${sustento.observacion || "Por verificar"}</span>
+      </div>
+    `;
+
+    document.body.appendChild(pop);
+    activeSustentoPopup = pop;
+
+    const rect = pop.getBoundingClientRect();
+    const pad = 16;
+    let top = y - rect.height - 12;
+    let left = x - rect.width / 2;
+    if (top < pad) top = y + 16;
+    if (left < pad) left = pad;
+    if (left + rect.width > window.innerWidth - pad) {
+      left = window.innerWidth - rect.width - pad;
+    }
+
+    pop.style.top = Math.round(top) + "px";
+    pop.style.left = Math.round(left) + "px";
+
+    pop.querySelector(".pot-popup-close").addEventListener("click", closeSustentoPopup);
+  }
+
+  function renderSubnetwork(net) {
+    if (!overlay || !modalSvg || !modalEdgesG || !modalNodesG) return;
+    activeNetwork = net;
+
+    modalTitle.textContent = net.title;
+    modalTitle.style.color = net.color;
+    modalSubtitle.textContent = `Modo Analítico // Nodos = ${net.count} · Dimensión Principal: ${net.nodes[0]?.dimension || 'Territorial'}`;
+
+    modalEdgesG.innerHTML = "";
+    modalNodesG.innerHTML = "";
+
+    const byId = {};
+    net.nodes.forEach((n) => { byId[n.id] = n; });
+    const edgesByNode = {};
+
+    function linkEdge(nodeId, edgeEl) {
+      if (!edgesByNode[nodeId]) edgesByNode[nodeId] = [];
+      edgesByNode[nodeId].push(edgeEl);
+    }
+
+    // Render Edges
+    net.edges.forEach((e) => {
+      const a = byId[e.from], b = byId[e.to];
+      if (!a || !b) return;
+
+      let ux = b.x - a.x, uy = b.y - a.y;
+      const dist = Math.hypot(ux, uy) || 1;
+      ux /= dist; uy /= dist;
+
+      const p0 = { x: a.x + ux * a.r, y: a.y + uy * a.r };
+      const p1 = { x: b.x - ux * b.r, y: b.y - uy * b.r };
+
+      const g = el("g", {
+        class: `redes-edge redes-edge-${e.kind}${e.dashed ? " is-dashed" : ""}`,
+        tabindex: "0",
+        role: "button",
+        "aria-label": `Vínculo ${a.fullName} - ${b.fullName}`
+      });
+
+      const d = `M${p0.x.toFixed(1)},${p0.y.toFixed(1)} L${p1.x.toFixed(1)},${p1.y.toFixed(1)}`;
+      const blob = el("path", { class: `redes-edge-blob redes-edge-blob-${e.kind}`, d, filter: "url(#blob-blur)" });
+      const hit = el("path", { class: "redes-edge-hit", d });
+      const line = el("path", { class: "redes-edge-line", d });
+
+      g.appendChild(blob);
+      g.appendChild(hit);
+      g.appendChild(line);
+
+      if (e.directed) {
+        const angle = (Math.atan2(p1.y - p0.y, p1.x - p0.x) * 180) / Math.PI;
+        const arrow = el("path", {
+          class: "redes-edge-arrow",
+          d: "M-9,-4 L0,0 L-9,4 Z",
+          transform: `translate(${p1.x.toFixed(1)},${p1.y.toFixed(1)}) rotate(${angle.toFixed(1)})`
+        });
+        g.appendChild(arrow);
+      }
+
+      const relationLabel = `${a.fullName} ➔ ${b.fullName}`;
+      g.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        openSustentoPopup(relationLabel, e.sustento, ev.clientX, ev.clientY);
+      });
+
+      modalEdgesG.appendChild(g);
+      linkEdge(e.from, g);
+      linkEdge(e.to, g);
+    });
+
+    // Render Nodes
+    net.nodes.forEach((n, idx) => {
+      const g = el("g", {
+        class: `redes-node${n.primary ? " is-primary" : ""}`,
+        "data-accent": net.accent,
+        tabindex: "0",
+        role: "button",
+        "aria-label": n.fullName,
+        transform: `translate(${n.x},${n.y})`
+      });
+
+      const floatG = el("g", { class: "redes-node-float" });
+      floatG.style.animationDuration = (4.4 + (idx % 5) * 0.35).toFixed(2) + "s";
+      floatG.style.animationDelay = (-(idx % 7) * 0.5).toFixed(2) + "s";
+
+      const circle = el("circle", { r: n.r });
+      floatG.appendChild(circle);
+
+      // Icon
+      const iconSize = Math.max(16, n.r * 0.52);
+      const fo = el("foreignObject", {
+        class: "redes-node-icon-fo",
+        x: -iconSize / 2,
+        y: -(n.r * 0.65),
+        width: iconSize,
+        height: iconSize
+      });
+      const div = document.createElement("div");
+      div.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+      div.className = "redes-node-icon";
+      div.innerHTML = `<i class="fa-solid ${n.icon}"></i>`;
+      fo.appendChild(div);
+      floatG.appendChild(fo);
+
+      // Label
+      const text = el("text", { class: "redes-node-label", y: -(n.r * 0.65) + iconSize + 2 });
+      n.label.forEach((lineText, lIdx) => {
+        const span = el("tspan", { x: 0, dy: lIdx === 0 ? 10 : 11 });
+        span.textContent = lineText;
+        text.appendChild(span);
+      });
+      floatG.appendChild(text);
+      g.appendChild(floatG);
+
+      // Node selection / Dimming / Inspector card
+      g.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        closeSustentoPopup();
+
+        const isDimmed = g.classList.contains("is-dimmed");
+        if (isDimmed) {
+          // Restore all
+          modalNodesG.querySelectorAll(".redes-node").forEach((el) => el.classList.remove("is-dimmed"));
+          modalEdgesG.querySelectorAll(".redes-edge").forEach((el) => el.classList.remove("is-dimmed"));
+        } else {
+          // Highlight this and neighbors, dim others
+          const touchingEdges = edgesByNode[n.id] || [];
+          modalNodesG.querySelectorAll(".redes-node").forEach((el) => el.classList.add("is-dimmed"));
+          modalEdgesG.querySelectorAll(".redes-edge").forEach((el) => el.classList.add("is-dimmed"));
+          g.classList.remove("is-dimmed");
+          touchingEdges.forEach((eEl) => eEl.classList.remove("is-dimmed"));
+
+          // Also undim neighbor nodes
+          net.edges.forEach((ed) => {
+            if (ed.from === n.id || ed.to === n.id) {
+              const otherId = ed.from === n.id ? ed.to : ed.from;
+              const otherNodeEl = modalNodesG.querySelector(`[aria-label="${byId[otherId]?.fullName}"]`);
+              if (otherNodeEl) otherNodeEl.classList.remove("is-dimmed");
+            }
+          });
+        }
+
+        // Update Actor Detail Box
+        const nameEl = document.getElementById("actorDetailName");
+        const roleEl = document.getElementById("actorDetailRole");
+        const obsEl = document.getElementById("actorDetailObs");
+        if (nameEl) nameEl.textContent = `[${n.id}] ${n.fullName} ${n.emoji || ''}`;
+        if (roleEl) roleEl.innerHTML = `<strong>Rol:</strong> ${n.role} · <strong>Dimensión:</strong> ${n.dimension} (${n.type})`;
+        if (obsEl) obsEl.textContent = n.notes || "No atribuir acciones o compromisos sin evidencia";
+      });
+
+      modalNodesG.appendChild(g);
+    });
+  }
+
+  function openNetworkModal(hubKey) {
+    const net = NETWORKS[hubKey];
+    if (!net || !overlay) return;
+    renderSubnetwork(net);
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (!overlay) return;
+    overlay.hidden = true;
+    closeSustentoPopup();
+    document.body.style.overflow = "";
+  }
+
+  modalClose?.addEventListener("click", closeModal);
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+      closePopup();
+    }
+  });
+
+  // Modal Layer Toggles
+  overlay?.querySelectorAll(".redes-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const type = btn.getAttribute("data-toggle");
+      const isOn = btn.classList.toggle("is-on");
+      btn.setAttribute("aria-checked", isOn ? "true" : "false");
+
+      if (type === "hub") {
+        modalNodesG?.querySelectorAll(".redes-node.is-primary").forEach((el) => {
+          el.style.display = isOn ? "" : "none";
+        });
+      } else if (type === "nodes") {
+        modalNodesG?.querySelectorAll(".redes-node:not(.is-primary)").forEach((el) => {
+          el.style.display = isOn ? "" : "none";
+        });
+      } else if (type === "edges") {
+        modalEdgesG?.classList.toggle("is-hidden", !isOn);
+      }
+    });
+  });
+
+  // -------------------------------------------------------------
+  // 5. RED COMPLETA DE 50 NODOS (VISTA GLOBAL DE GALAXIA)
+  // -------------------------------------------------------------
+  const btnModeHubs = document.getElementById("btnModeHubs");
+  const btnMode50 = document.getElementById("btnMode50");
+  const svg50 = document.getElementById("kennedy-50-svg");
+  const svg50Links = document.getElementById("kennedy-50-links");
+  const svg50Nodes = document.getElementById("kennedy-50-nodes");
+
+  let initialized50 = false;
+  function init50NodeGalaxy() {
+    if (initialized50 || !svg50Links || !svg50Nodes) return;
+    initialized50 = true;
+
+    // Arrange 5 galaxy centers in a pentagon (cx: 440, cy: 310, R: 210)
+    const clusterCenters = {
+      'Comunidad': { x: 440, y: 130, color: '#2fbfae', grad: 'grad-green' },
+      'Producción y comercio': { x: 670, y: 260, color: '#eab04c', grad: 'grad-yellow' },
+      'Formación y gestión': { x: 580, y: 490, color: '#ef8b3c', grad: 'grad-blue' },
+      'Instituciones y soporte': { x: 300, y: 490, color: '#b784f4', grad: 'grad-purple' },
+      'No humanos y entorno': { x: 210, y: 260, color: '#34d399', grad: 'grad-coral' }
+    };
+
+    const nodeCoords = {};
+    const clusterCounts = {};
+
+    ALL_NODES.forEach((n) => {
+      const c = clusterCenters[n.community];
+      if (!clusterCounts[n.community]) clusterCounts[n.community] = 0;
+      const idx = clusterCounts[n.community]++;
+
+      if (n.isHub) {
+        nodeCoords[n.id] = { x: c.x, y: c.y, r: 24, node: n, color: c.color };
+      } else {
+        const angle = (2 * Math.PI * idx) / 9;
+        const rDist = 65 + (idx % 2 === 0 ? 12 : -12);
+        nodeCoords[n.id] = {
+          x: Math.round(c.x + rDist * Math.cos(angle)),
+          y: Math.round(c.y + rDist * Math.sin(angle)),
+          r: 15,
+          node: n,
+          color: c.color
+        };
+      }
+    });
+
+    // Draw Edges (hub to members + peer connections)
+    ALL_NODES.forEach((n) => {
+      if (n.isHub) {
+        const members = ALL_NODES.filter((m) => m.community === n.community && !m.isHub);
+        members.forEach((m) => {
+          const a = nodeCoords[n.id], b = nodeCoords[m.id];
+          const line = el("line", {
+            x1: a.x, y1: a.y, x2: b.x, y2: b.y,
+            stroke: a.color, "stroke-width": 1.2, opacity: 0.35, class: "edge-50",
+            "data-from": n.id, "data-to": m.id
+          });
+          svg50Links.appendChild(line);
+        });
+      }
+    });
+
+    // Draw inter-hub lines
+    const hubPairs = [["N02", "N11"], ["N11", "N23"], ["N23", "N31"], ["N31", "N41"], ["N41", "N02"]];
+    hubPairs.forEach(([h1, h2]) => {
+      const a = nodeCoords[h1], b = nodeCoords[h2];
+      const line = el("line", {
+        x1: a.x, y1: a.y, x2: b.x, y2: b.y,
+        stroke: "#2fd4c8", "stroke-width": 2.2, "stroke-dasharray": "6 4", opacity: 0.7, class: "edge-50 edge-hub-link",
+        "data-from": h1, "data-to": h2
+      });
+      svg50Links.appendChild(line);
+    });
+
+    // Draw Nodes
+    Object.values(nodeCoords).forEach(({ x, y, r, node, color }) => {
+      const g = el("g", {
+        class: `node-50${node.isHub ? " is-hub" : ""}`,
+        "data-id": node.id,
+        "data-dim": node.dimension,
+        transform: `translate(${x},${y})`
+      });
+
+      const circle = el("circle", {
+        r: r,
+        fill: "#0c1822",
+        stroke: color,
+        "stroke-width": node.isHub ? 3 : 1.8
+      });
+      circle.style.color = color;
+      g.appendChild(circle);
+
+      const text = el("text", {
+        y: node.isHub ? 4 : 3,
+        "text-anchor": "middle",
+        fill: "#ffffff",
+        "font-size": node.isHub ? 11 : 8.5,
+        "font-weight": node.isHub ? 800 : 600,
+        "pointer-events": "none"
+      });
+      text.textContent = node.icon || node.name.slice(0, 3);
+      g.appendChild(text);
+
+      const title = el("title");
+      title.textContent = `[${node.id}] ${node.name} (${node.community})`;
+      g.appendChild(title);
+
+      g.addEventListener("mouseenter", () => {
+        svg50Nodes.querySelectorAll(".node-50").forEach((nEl) => nEl.classList.add("is-dimmed"));
+        svg50Links.querySelectorAll(".edge-50").forEach((eEl) => eEl.classList.add("is-dimmed"));
+        g.classList.remove("is-dimmed");
+
+        svg50Links.querySelectorAll(`[data-from="${node.id}"], [data-to="${node.id}"]`).forEach((eEl) => {
+          eEl.classList.remove("is-dimmed");
+          eEl.classList.add("is-highlighted");
+          const otherId = eEl.getAttribute("data-from") === node.id ? eEl.getAttribute("data-to") : eEl.getAttribute("data-from");
+          const otherNodeEl = svg50Nodes.querySelector(`[data-id="${otherId}"]`);
+          if (otherNodeEl) otherNodeEl.classList.remove("is-dimmed");
+        });
+      });
+
+      g.addEventListener("mouseleave", () => {
+        svg50Nodes.querySelectorAll(".node-50").forEach((nEl) => nEl.classList.remove("is-dimmed"));
+        svg50Links.querySelectorAll(".edge-50").forEach((eEl) => {
+          eEl.classList.remove("is-dimmed");
+          eEl.classList.remove("is-highlighted");
+        });
+      });
+
+      g.addEventListener("click", () => {
+        // Find community key and open subnetwork modal
+        const commMap = {
+          'Comunidad': 'comunidad',
+          'Producción y comercio': 'produccion',
+          'Formación y gestión': 'formacion',
+          'Instituciones y soporte': 'instituciones',
+          'No humanos y entorno': 'entorno'
+        };
+        const cKey = commMap[node.community];
+        if (cKey) openNetworkModal(cKey);
+      });
+
+      svg50Nodes.appendChild(g);
+    });
+  }
+
+  btnModeHubs?.addEventListener("click", () => {
+    btnModeHubs.classList.add("active");
+    btnModeHubs.style.background = "#2fd4c8";
+    btnModeHubs.style.color = "#08131d";
+    btnModeHubs.style.borderColor = "#2fd4c8";
+
+    btnMode50.classList.remove("active");
+    btnMode50.style.background = "transparent";
+    btnMode50.style.color = "#eaf4f4";
+    btnMode50.style.borderColor = "var(--ink)";
+
+    mainSvg.style.display = "";
+    svg50.style.display = "none";
+    ensureLoop();
+  });
+
+  btnMode50?.addEventListener("click", () => {
+    btnMode50.classList.add("active");
+    btnMode50.style.background = "#2fd4c8";
+    btnMode50.style.color = "#08131d";
+    btnMode50.style.borderColor = "#2fd4c8";
+
+    btnModeHubs.classList.remove("active");
+    btnModeHubs.style.background = "transparent";
+    btnModeHubs.style.color = "#eaf4f4";
+    btnModeHubs.style.borderColor = "var(--ink)";
+
+    mainSvg.style.display = "none";
+    svg50.style.display = "";
+    init50NodeGalaxy();
+  });
+
+  // Slide observer
+  const slide = document.getElementById("socialNetworkSlide");
+  if (slide) {
+    const obs = new MutationObserver(() => {
+      if (slide.classList.contains("active")) {
+        ensureLoop();
+      }
+    });
+    obs.observe(slide, { attributes: true, attributeFilter: ["class"] });
+  }
 })();
-</script></body></html>
+
+</script>
+<!-- ============ POPUP: redes por estructura (Idéntico a modelamiento2) ============ -->
+<div id="redes-modal-overlay" class="redes-modal-overlay" hidden>
+  <div class="redes-modal" role="dialog" aria-modal="true" aria-labelledby="redes-modal-title">
+    <button class="redes-modal-close" type="button" aria-label="Cerrar">✕</button>
+
+    <div class="redes-modal-header">
+      <h2 id="redes-modal-title">Comunidad</h2>
+      <p class="redes-modal-subtitle">Modo Analítico // Nodos = 10 · Dimensión Social</p>
+    </div>
+
+    <div class="redes-modal-body">
+      <svg class="redes-network-svg" viewBox="0 0 820 580" xmlns="http://www.w3.org/2000/svg">
+        <g class="redes-edges"></g>
+        <g class="redes-nodes"></g>
+      </svg>
+
+      <aside class="redes-side-panel">
+        <div class="redes-legend-card">
+          <span class="redes-legend-card-title">Leyenda de Capas</span>
+          <div class="redes-toggle-row">
+            <span>Hub Articulador</span>
+            <button class="redes-toggle is-on" type="button" data-toggle="hub" role="switch" aria-checked="true"><span class="redes-toggle-knob"></span></button>
+          </div>
+          <div class="redes-toggle-row">
+            <span>Nodos Miembros</span>
+            <button class="redes-toggle is-on" type="button" data-toggle="nodes" role="switch" aria-checked="true"><span class="redes-toggle-knob"></span></button>
+          </div>
+          <div class="redes-toggle-row">
+            <span>Conexiones Activas</span>
+            <button class="redes-toggle is-on" type="button" data-toggle="edges" role="switch" aria-checked="true"><span class="redes-toggle-knob"></span></button>
+          </div>
+        </div>
+
+        <div class="redes-conventions-card">
+          <span class="redes-legend-card-title">Convenciones</span>
+          <div class="redes-convention-item"><span class="redes-swatch redes-swatch-soporte"></span>Vínculo con Hub</div>
+          <div class="redes-convention-item"><span class="redes-swatch redes-swatch-indirecta"></span>Colaboración entre pares</div>
+          <div class="redes-convention-item"><span class="redes-swatch redes-swatch-resiliencia"></span>Coordinación territorial</div>
+        </div>
+
+        <div class="redes-conventions-card" id="redes-actor-detail" style="font-size:12px;line-height:1.5;">
+          <span class="redes-legend-card-title">Detalle del Actor</span>
+          <div id="actorDetailContent" style="color:#b9beb2;">
+            <p style="margin:0 0 6px;"><strong id="actorDetailName" style="color:#2fd4c8;font-size:13px;">Selecciona un nodo</strong></p>
+            <p id="actorDetailRole" style="margin:0 0 6px;color:#cbd5e1;"></p>
+            <p id="actorDetailObs" style="margin:0;font-style:italic;color:#94a3b8;font-size:11px;"></p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+</body></html>
