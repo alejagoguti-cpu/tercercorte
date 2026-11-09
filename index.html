@@ -152,7 +152,14 @@
 
     <!-- RIGHT: Hero Visual Card (SVG) -->
     <div class="hero-visual">
-      <div class="hero-visual-card">
+      <div class="hero-visual-card" style="position:relative;">
+        <!-- Floating Zoom & Fit Controls -->
+        <div style="position:absolute; top:12px; right:14px; z-index:20; display:flex; align-items:center; gap:5px; background:rgba(10,20,28,0.9); border:1px solid rgba(47,212,200,0.3); border-radius:20px; padding:3px 8px; backdrop-filter:blur(8px);">
+          <span style="font-size:10px; color:#2fd4c8; font-weight:700; margin-right:2px;"><i class="fa-solid fa-magnifying-glass"></i> Zoom:</span>
+          <button id="btnNetZoomIn" style="background:rgba(47,212,200,0.15); border:1px solid #2fd4c8; color:#2fd4c8; font-weight:800; border-radius:50%; width:22px; height:22px; cursor:pointer; font-size:12px; line-height:1;" title="Acercar">+</button>
+          <button id="btnNetZoomOut" style="background:rgba(47,212,200,0.15); border:1px solid #2fd4c8; color:#2fd4c8; font-weight:800; border-radius:50%; width:22px; height:22px; cursor:pointer; font-size:12px; line-height:1;" title="Alejar">−</button>
+          <button id="btnNetZoomReset" style="background:transparent; border:1px solid rgba(255,255,255,0.2); color:#cbd5e1; font-weight:600; border-radius:12px; padding:2px 7px; cursor:pointer; font-size:10px;" title="Resetear zoom">Reset</button>
+        </div>
         <p class="visual-question">¿Cómo organiza, relaciona y prioriza Kennedy 2030 los componentes territoriales?</p>
 
         <div class="legend">
@@ -943,6 +950,43 @@ const SVG_NS = "http://www.w3.org/2000/svg";
 
   document.addEventListener("click", (e) => {
     if (activePopup && !activePopup.contains(e.target)) closePopup();
+  });
+
+  
+  // ZOOM CONTROLS FOR BOTH SVGS
+  let currentZoom = 1.0;
+  const originalViewBoxHubs = { x: 0, y: 0, w: 620, h: 540 };
+  const originalViewBox50 = { x: 0, y: 0, w: 880, h: 620 };
+
+  function applyZoom(delta) {
+    currentZoom = Math.max(0.5, Math.min(2.5, currentZoom * delta));
+    const activeSvg = currentMode === 'hubs' ? mainSvg : svg50;
+    const orig = currentMode === 'hubs' ? originalViewBoxHubs : originalViewBox50;
+    
+    const newW = orig.w / currentZoom;
+    const newH = orig.h / currentZoom;
+    const newX = orig.x + (orig.w - newW) / 2;
+    const newY = orig.y + (orig.h - newH) / 2;
+    activeSvg.setAttribute('viewBox', `${newX} ${newY} ${newW} ${newH}`);
+  }
+
+  function resetZoom() {
+    currentZoom = 1.0;
+    mainSvg.setAttribute('viewBox', '0 0 620 540');
+    svg50.setAttribute('viewBox', '0 0 880 620');
+  }
+
+  document.getElementById('btnNetZoomIn')?.addEventListener('click', () => applyZoom(1.25));
+  document.getElementById('btnNetZoomOut')?.addEventListener('click', () => applyZoom(0.8));
+  document.getElementById('btnNetZoomReset')?.addEventListener('click', resetZoom);
+
+  // Wheel zoom over SVGs
+  [mainSvg, svg50].forEach(s => {
+    s?.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0) applyZoom(1.15);
+      else applyZoom(0.85);
+    }, { passive: false });
   });
 
   // 7. SUBRED MODAL POPUP
