@@ -74,123 +74,134 @@
 <section class="slide lime"><p class="eyebrow">09 / Decidir</p><h2>¿Qué hacemos primero?</h2><p class="lead">No se trata de proponerlo todo. Se trata de comparar acciones y entender sus consecuencias para cada actor.</p><div class="grid"><div class="tile reveal"><b>Impacto</b><p>Articulación de organizaciones comunitarias, espacios de aprendizaje y redes locales de producción de alimentos en Kennedy.</p></div><div class="tile reveal"><b>Recursos</b><p>Participación de organizaciones existentes, acuerdos de uso y gestión del espacio, acompañamiento técnico y recursos para operación y mantenimiento.</p></div><div class="tile reveal"><b>Riesgos</b><p>Posibles conflictos por el uso del suelo, distribución desigual de beneficios y afectaciones a la biodiversidad si las intervenciones no se evalúan.</p></div></div></section>
 <section class="slide dark"><p class="eyebrow">10 / Próximo paso</p><h2>Del diagrama al espacio.</h2><p class="lead">Seleccionar una intervención, dibujar cómo funciona y probar sus relaciones en escenarios comparables.</p><p class="small">Pendiente: cartografía validada, reglas de simulación, red completa de actores, especies verificadas, medidas y permisos.</p></section>
 
+
 <section class="slide dark" id="socialNetworkSlide">
-  <p class="eyebrow">12 / Red territorial · Matriz Maestra Kennedy 2030</p>
-  <h2>¿Cómo organiza, relaciona y prioriza Kennedy 2030 los componentes territoriales?</h2>
-  <p class="lead">50 nodos categóricos y 5 hubs articuladores en constante interacción (social, socioeconómica, espacial, sociopolítica y socioambiental). Arrastra los nodos con física de resortes, pulsa los vínculos para consultar su sustento de evidencia o haz clic en cualquier hub para sumergirte en su subred analítica.</p>
+  <div class="kennedy-hero-layout">
 
-  <!-- Switch / Controls Bar con Control de Encendido de Nodos -->
-  <div class="network-controls-wrapper" style="margin: 18px 0 14px; background: rgba(10,20,28,0.85); border: 1px solid rgba(47,212,200,0.25); border-radius: 18px; padding: 16px 20px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-      <!-- Mode buttons -->
-      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <button class="control active" id="btnModeHubs" style="background:#2fd4c8; color:#08131d; border-color:#2fd4c8; font-weight:700;">
-          <i class="fa-solid fa-diagram-project"></i> Hubs Articuladores (5)
-        </button>
-        <button class="control" id="btnMode50" style="color:#eaf4f4;">
-          <i class="fa-solid fa-circle-nodes"></i> Red Completa (50 Nodos)
-        </button>
-        <button class="control" id="btnOpenNodeManager" style="color:#2fd4c8; border-color:rgba(47,212,200,0.5); font-weight:700; background:rgba(47,212,200,0.08);">
-          <i class="fa-solid fa-power-off" style="margin-right:5px;"></i> Prender / Apagar Nodos
-        </button>
-        <button class="control" id="btnResetPhysics" style="color:#eaf4f4;" title="Reiniciar posiciones">
-          <i class="fa-solid fa-rotate-right"></i> Reset
-        </button>
+    <!-- LEFT: Copy & Interactive Power Controls -->
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#2fd4c8; margin-bottom:12px;">12 / Red territorial · Kennedy 2030</p>
+      <h2 style="font-size:clamp(30px, 3.8vw, 52px); line-height:1.05; margin:0 0 16px; font-weight:700;">¿Cómo se construye socialmente la red?</h2>
+      <p class="lead" style="font-size:15px; line-height:1.55; color:#cbd5e1; margin-bottom:18px;">
+        50 nodos categóricos y 5 hubs articuladores en constante interacción multiescalar. Arrastra los nodos, pulsa cualquier vínculo para ver la evidencia o haz clic en un nodo para <strong>prenderlo o apagarlo</strong>.
+      </p>
+
+      <!-- Power Controls Box -->
+      <div style="background:rgba(10,20,28,0.85); border:1px solid rgba(47,212,200,0.25); border-radius:16px; padding:14px 16px; margin-bottom:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <button class="control active" id="btnModeHubs" style="background:#2fd4c8; color:#08131d; border-color:#2fd4c8; font-weight:700; font-size:11px; padding:6px 12px;">
+              <i class="fa-solid fa-diagram-project"></i> 5 Hubs
+            </button>
+            <button class="control" id="btnMode50" style="color:#eaf4f4; font-size:11px; padding:6px 12px;">
+              <i class="fa-solid fa-circle-nodes"></i> 50 Nodos
+            </button>
+            <button class="control" id="btnOpenNodeManager" style="color:#2fd4c8; border-color:rgba(47,212,200,0.5); font-weight:700; background:rgba(47,212,200,0.08); font-size:11px; padding:6px 12px;">
+              <i class="fa-solid fa-power-off"></i> Gestor (50)
+            </button>
+            <button class="control" id="btnResetPhysics" style="color:#eaf4f4; font-size:11px; padding:6px 10px;" title="Resetear posiciones">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+          <div id="liveNodeStats" style="font-size:11.5px; font-weight:700; color:#2fd4c8; background:rgba(47,212,200,0.12); border:1px solid rgba(47,212,200,0.3); padding:4px 12px; border-radius:20px;">
+            <span id="statNodesVisible">50</span>/50 Activos · <span id="statEdgesVisible">95</span> Vínculos
+          </div>
+        </div>
+
+        <!-- Quick Community Power Toggles -->
+        <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; padding-top:8px; border-top:1px solid rgba(255,255,255,0.08);">
+          <span style="font-size:11px; font-weight:700; color:#9cb3ba; text-transform:uppercase;">Prender/Apagar:</span>
+          <button class="comm-toggle is-on" data-comm="comunidad" style="--c:#2fbfae;">
+            <span class="comm-dot"></span> Comunidad
+          </button>
+          <button class="comm-toggle is-on" data-comm="produccion" style="--c:#eab04c;">
+            <span class="comm-dot"></span> Producción
+          </button>
+          <button class="comm-toggle is-on" data-comm="formacion" style="--c:#ef8b3c;">
+            <span class="comm-dot"></span> Formación
+          </button>
+          <button class="comm-toggle is-on" data-comm="instituciones" style="--c:#b784f4;">
+            <span class="comm-dot"></span> Instituciones
+          </button>
+          <button class="comm-toggle is-on" data-comm="entorno" style="--c:#34d399;">
+            <span class="comm-dot"></span> Entorno
+          </button>
+          <div style="margin-left:auto; display:flex; gap:6px;">
+            <button id="btnPowerAllOn" style="background:transparent; border:1px solid #2fd4c8; color:#2fd4c8; font-size:10px; font-weight:700; padding:3px 8px; border-radius:14px; cursor:pointer;">Todos</button>
+            <button id="btnPowerAllOff" style="background:transparent; border:1px solid #ef6f6f; color:#ef6f6f; font-size:10px; font-weight:700; padding:3px 8px; border-radius:14px; cursor:pointer;">Ninguno</button>
+          </div>
+        </div>
       </div>
 
-      <!-- Live Counters -->
-      <div id="liveNodeStats" style="font-size:12.5px; font-weight:700; color:#2fd4c8; background:rgba(47,212,200,0.12); border:1px solid rgba(47,212,200,0.35); padding:7px 16px; border-radius:30px; letter-spacing:0.3px;">
-        <span id="statNodesVisible">50</span> / 50 Nodos Activos · <span id="statEdgesVisible">95</span> Conexiones
+      <!-- 3 Compact Mechanism Features -->
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;">
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px;">
+          <b style="color:#2fbfae; font-size:12px; display:block; margin-bottom:4px;">1 · Social</b>
+          <p style="font-size:11.5px; line-height:1.4; color:#94a3b8; margin:0;">Convocatoria comunitaria y veedurías.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px;">
+          <b style="color:#eab04c; font-size:12px; display:block; margin-bottom:4px;">2 · Económica</b>
+          <p style="font-size:11.5px; line-height:1.4; color:#94a3b8; margin:0;">Intercambio local, huertas y reciclaje.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px;">
+          <b style="color:#b784f4; font-size:12px; display:block; margin-bottom:4px;">3 · Ecológica</b>
+          <p style="font-size:11.5px; line-height:1.4; color:#94a3b8; margin:0;">Árboles, humedales y soporte público.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Quick Community Power Switches (Prender / Apagar por Comunidad) -->
-    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08);">
-      <span style="font-size:11.5px; font-weight:700; color:#9cb3ba; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; gap:5px;">
-        <i class="fa-solid fa-toggle-on" style="color:#2fd4c8;"></i> Prender/Apagar:
-      </span>
-      <button class="comm-toggle is-on" data-comm="comunidad" style="--c:#2fbfae;">
-        <span class="comm-dot"></span> Comunidad (10)
-      </button>
-      <button class="comm-toggle is-on" data-comm="produccion" style="--c:#eab04c;">
-        <span class="comm-dot"></span> Producción (10)
-      </button>
-      <button class="comm-toggle is-on" data-comm="formacion" style="--c:#ef8b3c;">
-        <span class="comm-dot"></span> Formación (10)
-      </button>
-      <button class="comm-toggle is-on" data-comm="instituciones" style="--c:#b784f4;">
-        <span class="comm-dot"></span> Instituciones (10)
-      </button>
-      <button class="comm-toggle is-on" data-comm="entorno" style="--c:#34d399;">
-        <span class="comm-dot"></span> Entorno (10)
-      </button>
+    <!-- RIGHT: Hero Visual Card (SVG) -->
+    <div class="hero-visual">
+      <div class="hero-visual-card">
+        <p class="visual-question">¿Cómo organiza, relaciona y prioriza Kennedy 2030 los componentes territoriales?</p>
 
-      <div style="margin-left:auto; display:flex; gap:8px;">
-        <button id="btnPowerAllOn" style="background:rgba(47,212,200,0.12); border:1px solid #2fd4c8; color:#2fd4c8; font-size:11px; font-weight:700; padding:5px 12px; border-radius:20px; cursor:pointer;">
-          <i class="fa-solid fa-check"></i> Prender Todos
-        </button>
-        <button id="btnPowerAllOff" style="background:rgba(239,111,111,0.12); border:1px solid #ef6f6f; color:#ef6f6f; font-size:11px; font-weight:700; padding:5px 12px; border-radius:20px; cursor:pointer;">
-          <i class="fa-solid fa-ban"></i> Apagar Todos
-        </button>
-      </div>
-    </div>
-  </div>
+        <div class="legend">
+          <span class="legend-title">Convenciones</span>
+          <span class="legend-item">
+            <svg class="leg-svg" viewBox="0 0 50 12" width="46" height="12" aria-hidden="true">
+              <line x1="2" y1="6" x2="36" y2="6" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-dasharray="3 3"></line>
+              <path d="M36,6 L30,2 L30,10 Z" fill="rgba(255,255,255,0.6)"></path>
+            </svg>
+            Redes dirigidas
+          </span>
+          <span class="legend-item">
+            <svg class="leg-svg" viewBox="0 0 56 12" width="50" height="12" aria-hidden="true">
+              <line x1="8" y1="6" x2="48" y2="6" stroke="#2fd4c8" stroke-width="1.8" stroke-dasharray="4 3"></line>
+              <path d="M8,6 L14,2 L14,10 Z" fill="#2fd4c8"></path>
+              <path d="M48,6 L42,2 L42,10 Z" fill="#2fd4c8"></path>
+            </svg>
+            Coordinación entre hubs
+          </span>
+        </div>
 
-  <!-- Hero Visual Card -->
-  <div class="hero-visual-card">
-    <p class="visual-question">¿Cómo se articula, negocia y sostiene la red multiescalar de Kennedy?</p>
-
-    <div class="legend">
-      <span class="legend-title">Convenciones</span>
-      <span class="legend-item">
-        <svg class="leg-svg" viewBox="0 0 50 12" width="50" height="12" aria-hidden="true">
-          <line x1="2" y1="6" x2="38" y2="6" stroke="rgba(255,255,255,0.45)" stroke-width="1.6" stroke-dasharray="3 3"></line>
-          <path d="M38,6 L31,2 L31,10 Z" fill="rgba(255,255,255,0.65)"></path>
+        <!-- SVG Network (5 Hubs) -->
+        <svg viewBox="0 0 620 540" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-network-svg" aria-label="Red interactiva Kennedy 2030">
+          <defs>
+            <linearGradient id="grad-green" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#45d6c5"/><stop offset="100%" stop-color="#1f8f82"/></linearGradient>
+            <linearGradient id="grad-yellow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5c26b"/><stop offset="100%" stop-color="#d9902e"/></linearGradient>
+            <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffb37a"/><stop offset="100%" stop-color="#e8763c"/></linearGradient>
+            <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d8b4fe"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+            <linearGradient id="grad-coral" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6ee7b7"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+          </defs>
+          <g class="links" id="kennedy-main-links"></g>
+          <g class="nodes" id="kennedy-main-nodes"></g>
         </svg>
-        Redes dirigidas
-      </span>
-      <span class="legend-item">
-        <svg class="leg-svg" viewBox="0 0 56 12" width="56" height="12" aria-hidden="true">
-          <line x1="8" y1="6" x2="48" y2="6" stroke="#2fd4c8" stroke-width="1.8" stroke-dasharray="4 3"></line>
-          <path d="M8,6 L15,2 L15,10 Z" fill="#2fd4c8"></path>
-          <path d="M48,6 L41,2 L41,10 Z" fill="#2fd4c8"></path>
+
+        <!-- SVG Network (50 Nodos) -->
+        <svg viewBox="0 0 880 620" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-50-svg" style="display:none;max-width:880px;" aria-label="Red completa de 50 nodos">
+          <g class="links-50" id="kennedy-50-links"></g>
+          <g class="nodes-50" id="kennedy-50-nodes"></g>
         </svg>
-        Coordinación entre hubs
-      </span>
-      <span class="legend-item" style="color:#2fd4c8;font-weight:600;">
-        <i class="fa-solid fa-hand-pointer" style="margin-right:4px;"></i> Clic en hub = Subred · Clic en vínculo = Evidencia
-      </span>
+
+        <p style="font-size:11px; color:#2fd4c8; margin-top:8px; font-weight:600; text-align:center;">
+          <i class="fa-solid fa-hand-pointer"></i> Clic: Prender/Apagar · Doble clic: Entrar a subred · Clic en flecha: Evidencia
+        </p>
+      </div>
     </div>
 
-    <!-- Main Dynamic SVG for 5 Hubs -->
-    <svg viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-network-svg" aria-label="Diagrama de red interactiva Kennedy 2030">
-      <g class="links" id="kennedy-main-links"></g>
-      <g class="nodes" id="kennedy-main-nodes"></g>
-    </svg>
-
-    <!-- Global 50-node container (shown when toggled) -->
-    <svg viewBox="0 0 880 620" xmlns="http://www.w3.org/2000/svg" class="network-svg" id="kennedy-50-svg" style="display:none;max-width:880px;" aria-label="Red completa de 50 nodos">
-      <g class="links-50" id="kennedy-50-links"></g>
-      <g class="nodes-50" id="kennedy-50-nodes"></g>
-    </svg>
-  </div>
-
-  <!-- 3 Feature blocks inspired by modelamiento2 -->
-  <div class="grid" style="margin-top:28px;">
-    <div class="tile reveal">
-      <b style="color:#2fbfae;"><i class="fa-solid fa-users" style="margin-right:8px;"></i>1 · Dimensión Social y Convocatoria</b>
-      <p>JAC, residentes, colectivos ambientales y veedurías articulan acuerdos de base y agendas compartidas para el territorio.</p>
-    </div>
-    <div class="tile reveal">
-      <b style="color:#eab04c;"><i class="fa-solid fa-seedling" style="margin-right:8px;"></i>2 · Dimensión Socioeconómica</b>
-      <p>Huerteros, recicladores, tenderos y Corabastos estructuran circuitos de economía circular, compostaje y abastecimiento.</p>
-    </div>
-    <div class="tile reveal">
-      <b style="color:#b784f4;"><i class="fa-solid fa-landmark" style="margin-right:8px;"></i>3 · Soporte Institucional y Ecológico</b>
-      <p>Universidades, Alcaldía Local, Jardín Botánico y la red ecosistémica (suelos, humedales, árboles) sostienen la resiliencia.</p>
-    </div>
   </div>
 </section>
+
 
 </main><div class="footer"><button id="prev">← ANTERIOR</button><span id="counter">01 / 11</span><button id="next">SIGUIENTE →</button></div><script>
 const slides=[...document.querySelectorAll('.slide')];let current=0;function show(n){current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=String(current+1).padStart(2,'0')+' / '+slides.length;document.getElementById('bar').style.width=((current+1)/slides.length*100)+'%';document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;window.scrollTo(0,0)}function reveal(){let a=[...slides[current].querySelectorAll('.reveal:not(.shown)')];if(a.length){a[0].classList.add('shown');return true}return false}document.getElementById('gotoNetBtn')?.addEventListener('click',()=>show(slides.length-1));document.getElementById('next').onclick=()=>{if(!reveal())show(current+1)};document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('resetBtn').onclick=()=>slides[current].querySelectorAll('.reveal').forEach(e=>e.classList.remove('shown'));document.getElementById('indexBtn').onclick=()=>{let s=prompt('Ir a escena (1-'+slides.length+')');if(s!==null&&Number.isInteger(+s)&&+s>=1&&+s<=slides.length)show(+s-1)};document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();document.getElementById('next').click()}if(e.key==='ArrowLeft')show(current-1)});const data=[['Vecinos','Quieren espacios que puedan usar y cuidar.','Pueden participar en acuerdos y actividades.','No todos tienen el mismo tiempo ni los mismos intereses.'],['Agricultores','Necesitan agua, espacio y continuidad.','Deciden cómo cultivar dentro de sus posibilidades.','La producción depende de recursos y cuidados.'],['Tenderos','Necesitan productos que puedan vender.','Deciden qué comprar y ofrecer.','Los excedentes locales pueden ser irregulares.'],['Comerciantes de Corabastos','Dependen de redes comerciales existentes.','Participan en decisiones de compra y venta.','Cambiar los circuitos puede afectar sus ingresos.'],['Recicladores','Necesitan condiciones seguras para trabajar.','Pueden participar en rutas de aprovechamiento.','No todo residuo sirve para compostaje.'],['Aves','Necesitan alimento, refugio y lugares seguros.','Se desplazan según las condiciones del entorno.','El vidrio y algunas intervenciones pueden dañarlas.'],['Plantas','Necesitan agua, luz y suelo adecuados.','Crecen según sus condiciones ambientales.','No toda especie sirve para cualquier lugar.'],['Hongos','Necesitan sustrato y condiciones controladas.','Descomponen materia orgánica según la especie.','El cultivo exige control técnico y sanitario.']];const box=document.getElementById('actors');data.forEach((a,i)=>{let b=document.createElement('button');b.className='actor';b.textContent=a[0];b.onclick=()=>{box.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');document.getElementById('actorDetail').innerHTML='<h3>'+a[0]+'</h3><p><b>Qué necesita:</b> '+a[1]+'</p><p><b>Qué puede hacer:</b> '+a[2]+'</p><p><b>Qué debemos tener en cuenta:</b> '+a[3]+'</p>'};box.appendChild(b)});show(0);
@@ -232,10 +243,8 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
 
   window.KENNEDY_NETWORKS = NETWORKS;
   window.KENNEDY_ALL_NODES = ALL_NODES;
+const SVG_NS = "http://www.w3.org/2000/svg";
 
-  const SVG_NS = "http://www.w3.org/2000/svg";
-
-  // Map from community name to key
   const COMM_NAME_TO_KEY = {
     'Comunidad': 'comunidad',
     'Producción y comercio': 'produccion',
@@ -260,11 +269,8 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     'entorno': 'N41'
   };
 
-  // State of visibility for all 50 nodes (Visible Sí / No)
   const nodePower = {};
-  ALL_NODES.forEach((n) => {
-    nodePower[n.id] = true; // All 50 initially ON
-  });
+  ALL_NODES.forEach((n) => { nodePower[n.id] = true; });
 
   const hubPower = {
     comunidad: true,
@@ -274,150 +280,108 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     entorno: true
   };
 
-  // Hub definitions for main pentagon view
+  // 5 Hubs in a balanced circle (viewBox 0 0 620 540)
   const HUB_DEFS = {
     comunidad: {
       id: "N02",
       hubKey: "comunidad",
-      cx: 340,
-      cy: 105,
-      r: 62,
-      label: ["Juntas de acción", "comunal (Comunidad)"],
-      icon: "fa-handshake",
+      cx: 310, cy: 92, r: 52,
+      lines: ["Juntas de Acción", "Comunal"],
+      sub: "(Comunidad)",
+      icon: "🤝",
       color: "#2fbfae",
-      gradient: "grad-green",
-      accent: "green"
+      gradId: "grad-green"
     },
     produccion: {
       id: "N11",
       hubKey: "produccion",
-      cx: 535,
-      cy: 245,
-      r: 62,
-      label: ["Huerteros urbanos", "(Producción y com.)"],
-      icon: "fa-seedling",
+      cx: 476, cy: 216, r: 52,
+      lines: ["Huerteros", "Urbanos"],
+      sub: "(Producción)",
+      icon: "🪴",
       color: "#eab04c",
-      gradient: "grad-yellow",
-      accent: "yellow"
+      gradId: "grad-yellow"
     },
     formacion: {
       id: "N23",
       hubKey: "formacion",
-      cx: 460,
-      cy: 470,
-      r: 62,
-      label: ["Universidades", "(Formación y gestión)"],
-      icon: "fa-graduation-cap",
+      cx: 413, cy: 415, r: 52,
+      lines: ["Universidades y", "Colegios"],
+      sub: "(Formación)",
+      icon: "🎓",
       color: "#ef8b3c",
-      gradient: "grad-blue",
-      accent: "blue"
+      gradId: "grad-blue"
     },
     instituciones: {
       id: "N31",
       hubKey: "instituciones",
-      cx: 220,
-      cy: 470,
-      r: 62,
-      label: ["Alcaldía local", "(Instituciones/soporte)"],
-      icon: "fa-landmark",
+      cx: 207, cy: 415, r: 52,
+      lines: ["Alcaldía Local y", "Planeación"],
+      sub: "(Instituciones)",
+      icon: "🏛️",
       color: "#b784f4",
-      gradient: "grad-purple",
-      accent: "purple"
+      gradId: "grad-purple"
     },
     entorno: {
       id: "N41",
       hubKey: "entorno",
-      cx: 145,
-      cy: 245,
-      r: 62,
-      label: ["Árboles existentes", "(No humanos/entorno)"],
-      icon: "fa-tree",
+      cx: 144, cy: 216, r: 52,
+      lines: ["Árboles y Red", "Ecológica"],
+      sub: "(Entorno)",
+      icon: "🌲",
       color: "#34d399",
-      gradient: "grad-coral",
-      accent: "coral"
+      gradId: "grad-coral"
     }
   };
 
   const EDGE_DEFS = [
     {
-      id: "e1",
-      from: "comunidad",
-      to: "produccion",
-      bow: { x: 30, y: -20 },
+      id: "e1", from: "comunidad", to: "produccion", bow: { x: 26, y: -16 },
       relation: "R046: Coordinación entre hubs",
       quote: "Articulación entre la organización barrial (JAC) y los circuitos locales de siembra, plazas de mercado y compostaje.",
-      dimension: "Sociopolítica / Socioeconómica",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Sociopolítica / Socioeconómica", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e2",
-      from: "produccion",
-      to: "formacion",
-      bow: { x: 35, y: 15 },
+      id: "e2", from: "produccion", to: "formacion", bow: { x: 28, y: 14 },
       relation: "R047: Coordinación entre hubs",
       quote: "Investigación aplicada, innovación agroecológica y pasantías universitarias vinculadas a la red de huerteros.",
-      dimension: "Sociopolítica / Espacial",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Sociopolítica / Espacial", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e3",
-      from: "formacion",
-      to: "instituciones",
-      bow: { x: 0, y: 35 },
+      id: "e3", from: "formacion", to: "instituciones", bow: { x: 0, y: 28 },
       relation: "R048: Coordinación entre hubs",
       quote: "Convenios técnico-científicos entre la academia y la Alcaldía Local / Planeación para evaluación y formulación de proyectos.",
-      dimension: "Sociopolítica / Institucional",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Sociopolítica / Institucional", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e4",
-      from: "instituciones",
-      to: "entorno",
-      bow: { x: -35, y: 15 },
+      id: "e4", from: "instituciones", to: "entorno", bow: { x: -28, y: 14 },
       relation: "R049: Coordinación entre hubs",
       quote: "Políticas de manejo silvicultural, declaratoria de reservas y preservación del arbolado urbano con Secretaría de Ambiente.",
-      dimension: "Sociopolítica / Socioambiental",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Sociopolítica / Socioambiental", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e5",
-      from: "entorno",
-      to: "comunidad",
-      bow: { x: -30, y: -20 },
+      id: "e5", from: "entorno", to: "comunidad", bow: { x: -26, y: -16 },
       relation: "R050: Coordinación entre hubs",
       quote: "Apropiación ciudadana, voluntariado de cuidado del bosque urbano y pactos vecinales de convivencia ecológica.",
-      dimension: "Socioambiental / Social",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Socioambiental / Social", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e6",
-      from: "comunidad",
-      to: "formacion",
-      bow: { x: 15, y: -10 },
+      id: "e6", from: "comunidad", to: "formacion", bow: { x: 14, y: 0 },
       relation: "Acuerdos Formativos Comunitarios",
       quote: "Talleres comunitarios, escuelas de liderazgo barrial y formación participativa abierta.",
-      dimension: "Social / Espacial",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Social / Espacial", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e7",
-      from: "comunidad",
-      to: "instituciones",
-      bow: { x: -15, y: -10 },
+      id: "e7", from: "comunidad", to: "instituciones", bow: { x: -14, y: 0 },
       relation: "Presupuestos Participativos y Cabildos",
       quote: "Mesas locales de concertación ciudadana y veedurías sobre inversiones territoriales.",
-      dimension: "Sociopolítica",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Sociopolítica", evidencia: "Hipótesis / por validar"
     },
     {
-      id: "e8",
-      from: "produccion",
-      to: "entorno",
-      bow: { x: 0, y: -25 },
+      id: "e8", from: "produccion", to: "entorno", bow: { x: 0, y: -20 },
       relation: "Regeneración de Suelos y Biomasa",
       quote: "Aprovechamiento de biomasa, polinizadores y abonos orgánicos en ciclos agroecológicos.",
-      dimension: "Socioambiental / Económica",
-      evidencia: "Hipótesis / por validar"
+      dimension: "Socioambiental / Económica", evidencia: "Hipótesis / por validar"
     }
   ];
 
@@ -432,9 +396,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     return node;
   }
 
-  // -------------------------------------------------------------
-  // 1. RENDER MAIN HUB DIAGRAM
-  // -------------------------------------------------------------
+  // 1. RENDER LINKS WITH MANDATORY fill="none"
   mainLinksG.innerHTML = "";
   mainNodesG.innerHTML = "";
 
@@ -446,9 +408,21 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       role: "button",
       "aria-label": `Relación ${e.relation}`
     });
-    const hit = el("path", { class: "link-hit" });
-    const line = el("path", { class: "link-line" });
-    const arrow = el("path", { class: "link-arrow", d: "M-14,-5 L0,0 L-14,5 Z" });
+
+    const hit = el("path", { class: "link-hit", fill: "none", stroke: "transparent", "stroke-width": "24" });
+    const line = el("path", {
+      class: "link-line",
+      fill: "none",
+      stroke: "rgba(255,255,255,0.4)",
+      "stroke-width": "1.8",
+      "stroke-dasharray": "5 5"
+    });
+    const arrow = el("path", {
+      class: "link-arrow",
+      fill: "rgba(255,255,255,0.65)",
+      stroke: "none",
+      d: "M-12,-4.5 L0,0 L-12,4.5 Z"
+    });
 
     g.appendChild(hit);
     g.appendChild(line);
@@ -456,6 +430,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     mainLinksG.appendChild(g);
   });
 
+  // 2. RENDER HUBS WITH CENTERED TEXT INSIDE CIRCLE
   const hubIds = Object.keys(HUB_DEFS);
   hubIds.forEach((key) => {
     const hub = HUB_DEFS[key];
@@ -467,64 +442,54 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     });
 
     const floatG = el("g", { class: "node-float" });
-    const circle = el("circle", { r: hub.r });
+
+    // Sleek circle with glowing border
+    const circle = el("circle", {
+      r: hub.r,
+      fill: "#101e28",
+      stroke: `url(#${hub.gradId})`,
+      "stroke-width": "3.5"
+    });
+    circle.style.stroke = hub.color; // reliable CSS fallback
     floatG.appendChild(circle);
 
-    const iconSize = 22;
-    const fo = el("foreignObject", {
-      x: -iconSize / 2,
-      y: -(hub.r * 0.58),
-      width: iconSize,
-      height: iconSize,
-      style: "pointer-events:none;overflow:visible;"
-    });
-    const div = document.createElement("div");
-    div.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-    div.style.cssText = "width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:18px;";
-    div.innerHTML = `<i class="fa-solid ${hub.icon}"></i>`;
-    fo.appendChild(div);
-    floatG.appendChild(fo);
-
-    const text = el("text", { y: -(hub.r * 0.15) });
-    hub.label.forEach((lineText, idx) => {
-      const span = el("tspan", { x: 0, dy: idx === 0 ? 0 : 13 });
-      span.textContent = lineText;
-      text.appendChild(span);
-    });
-    floatG.appendChild(text);
-
-    // Pill badge: Click = toggle, Double click = explore
-    const subPill = el("rect", {
-      x: -36,
-      y: hub.r - 8,
-      width: 72,
-      height: 18,
-      rx: 9,
-      fill: "rgba(10,20,30,0.9)",
-      stroke: hub.color,
-      "stroke-width": 1.2,
-      style: "cursor:pointer;"
-    });
-    const subText = el("text", {
-      x: 0,
-      y: hub.r + 5,
-      "font-size": 8.5,
-      fill: "#2fd4c8",
-      "font-weight": 700,
+    // Emoji Icon at top of circle
+    const iconText = el("text", {
+      x: 0, y: -14,
+      "font-size": "22",
       "text-anchor": "middle",
-      style: "pointer-events:none;"
+      "pointer-events": "none"
     });
-    subText.textContent = "🔍 Subred";
-    floatG.appendChild(subPill);
-    floatG.appendChild(subText);
+    iconText.textContent = hub.icon;
+    floatG.appendChild(iconText);
 
+    // Clean white text inside circle
+    const labelText = el("text", {
+      x: 0, y: 7,
+      fill: "#ffffff",
+      "font-family": "'Inter', Arial, sans-serif",
+      "font-size": "10",
+      "font-weight": "700",
+      "text-anchor": "middle",
+      "pointer-events": "none"
+    });
+
+    hub.lines.forEach((lineText, idx) => {
+      const span = el("tspan", { x: 0, dy: idx === 0 ? 0 : 12, fill: "#ffffff" });
+      span.textContent = lineText;
+      labelText.appendChild(span);
+    });
+
+    const subSpan = el("tspan", { x: 0, dy: 11, fill: hub.color, "font-size": "8.5" });
+    subSpan.textContent = hub.sub;
+    labelText.appendChild(subSpan);
+
+    floatG.appendChild(labelText);
     g.appendChild(floatG);
     mainNodesG.appendChild(g);
   });
 
-  // -------------------------------------------------------------
-  // 2. DRAG & SPRING PHYSICS
-  // -------------------------------------------------------------
+  // 3. PHYSICS SIMULATION
   let physicsRunning = false;
   const K_HOME = 36;
   const K_EDGE = 14;
@@ -534,29 +499,20 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
   const state = {};
   hubIds.forEach((id) => {
     const def = HUB_DEFS[id];
-    state[id] = {
-      x: def.cx,
-      y: def.cy,
-      vx: 0,
-      vy: 0,
-      dragging: false
-    };
+    state[id] = { x: def.cx, y: def.cy, vx: 0, vy: 0, dragging: false };
   });
 
   const pairs = [];
   EDGE_DEFS.forEach((e) => {
     const nA = HUB_DEFS[e.from], nB = HUB_DEFS[e.to];
     pairs.push({
-      a: e.from,
-      b: e.to,
-      rest: Math.hypot(nB.cx - nA.cx, nB.cy - nA.cy)
+      a: e.from, b: e.to, rest: Math.hypot(nB.cx - nA.cx, nB.cy - nA.cy)
     });
   });
 
   function toSvgPoint(evt) {
     const pt = mainSvg.createSVGPoint();
-    pt.x = evt.clientX;
-    pt.y = evt.clientY;
+    pt.x = evt.clientX; pt.y = evt.clientY;
     const ctm = mainSvg.getScreenCTM();
     if (!ctm) return { x: pt.x, y: pt.y };
     return pt.matrixTransform(ctm.inverse());
@@ -573,7 +529,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     const g = mainSvg.querySelector(`.link[data-relation="${edge.id}"]`);
     if (!g) return;
 
-    // If either hub is OFF, hide this link!
     if (!hubPower[edge.from] || !hubPower[edge.to]) {
       g.classList.add("link-hidden");
       return;
@@ -681,7 +636,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     }
   }
 
-  // Attach Drag & Click handlers
+  // Drag & Click handler
   hubIds.forEach((id) => {
     const g = mainSvg.querySelector(`[data-node="${id}"]`);
     if (!g) return;
@@ -726,15 +681,10 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       window.removeEventListener("pointerup", onPointerUp);
       ensureLoop();
 
-      // Check click target: if subPill was clicked or double click -> open modal; else toggle power!
-      if (!didMove && Date.now() - clickTime < 450) {
-        if (e.target.tagName === 'rect' && e.target.getAttribute('fill') === 'rgba(10,20,30,0.9)') {
-          openNetworkModal(id);
-        } else {
-          // Toggle node ON / OFF!
-          const hubNodeId = COMM_TO_HUB[id];
-          setNodePower(hubNodeId, !nodePower[hubNodeId]);
-        }
+      // Click: Toggle ON / OFF
+      if (!didMove && Date.now() - clickTime < 400) {
+        const hubNodeId = COMM_TO_HUB[id];
+        setNodePower(hubNodeId, !nodePower[hubNodeId]);
       }
     }
 
@@ -754,50 +704,38 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     ensureLoop();
   });
 
-  // -------------------------------------------------------------
-  // 3. LOGICA MAESTRA: PRENDER Y APAGAR NODOS (nodePower)
-  // -------------------------------------------------------------
+  // 4. POWER TOGGLE LOGIC
   function setNodePower(nodeId, isVisible) {
     nodePower[nodeId] = isVisible;
     const nodeObj = ALL_NODES.find((n) => n.id === nodeId);
     if (!nodeObj) return;
 
-    // 1. If this node is a Hub (N02, N11, N23, N31, N41), sync hubPower
     const hubKey = HUB_TO_COMM[nodeId];
     if (hubKey) {
       hubPower[hubKey] = isVisible;
       const hubEl = mainSvg.querySelector(`[data-node="${hubKey}"]`);
-      if (hubEl) {
-        hubEl.classList.toggle("is-off", !isVisible);
-      }
+      if (hubEl) hubEl.classList.toggle("is-off", !isVisible);
       updateAllEdges();
     }
 
-    // 2. In 50-node galaxy SVG, update node & edge visibility
     const g50 = document.querySelector(`#kennedy-50-nodes [data-id="${nodeId}"]`);
-    if (g50) {
-      g50.classList.toggle("is-off", !isVisible);
-    }
+    if (g50) g50.classList.toggle("is-off", !isVisible);
+
     document.querySelectorAll(`#kennedy-50-links [data-from="${nodeId}"], #kennedy-50-links [data-to="${nodeId}"]`).forEach((edgeEl) => {
       const fromId = edgeEl.getAttribute("data-from");
       const toId = edgeEl.getAttribute("data-to");
-      const bothVisible = nodePower[fromId] && nodePower[toId];
-      edgeEl.classList.toggle("edge-hidden", !bothVisible);
+      edgeEl.classList.toggle("edge-hidden", !(nodePower[fromId] && nodePower[toId]));
     });
 
-    // 3. In subnetwork modal SVG (if open)
     const modalNodeEl = document.querySelector(`#redes-modal-overlay [data-node-id="${nodeId}"]`);
-    if (modalNodeEl) {
-      modalNodeEl.classList.toggle("is-off", !isVisible);
-    }
+    if (modalNodeEl) modalNodeEl.classList.toggle("is-off", !isVisible);
+
     document.querySelectorAll(`#redes-modal-overlay [data-edge-from="${nodeId}"], #redes-modal-overlay [data-edge-to="${nodeId}"]`).forEach((edgeEl) => {
       const fromId = edgeEl.getAttribute("data-edge-from");
       const toId = edgeEl.getAttribute("data-edge-to");
-      const bothVisible = nodePower[fromId] && nodePower[toId];
-      edgeEl.classList.toggle("edge-hidden", !bothVisible);
+      edgeEl.classList.toggle("edge-hidden", !(nodePower[fromId] && nodePower[toId]));
     });
 
-    // 4. Update Node Manager modal card switch
     const cardSwitch = document.querySelector(`[data-switch-for="${nodeId}"]`);
     if (cardSwitch) {
       cardSwitch.classList.toggle("is-on", isVisible);
@@ -806,25 +744,18 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       if (card) card.classList.toggle("is-off", !isVisible);
     }
 
-    // 5. Update community buttons
     updateCommunityToggleButtons();
-
-    // 6. Update Live Counters
     updateLiveStats();
   }
 
   function setCommunityPower(commKey, isVisible) {
     const commName = Object.keys(COMM_NAME_TO_KEY).find((k) => COMM_NAME_TO_KEY[k] === commKey);
     const commNodes = ALL_NODES.filter((n) => n.community === commName);
-    commNodes.forEach((n) => {
-      setNodePower(n.id, isVisible);
-    });
+    commNodes.forEach((n) => setNodePower(n.id, isVisible));
   }
 
   function setAllNodesPower(isVisible) {
-    ALL_NODES.forEach((n) => {
-      setNodePower(n.id, isVisible);
-    });
+    ALL_NODES.forEach((n) => setNodePower(n.id, isVisible));
   }
 
   function updateCommunityToggleButtons() {
@@ -839,13 +770,10 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
 
   function updateLiveStats() {
     const visibleCount = ALL_NODES.filter((n) => nodePower[n.id]).length;
-    // Calculate visible edges
     let visibleEdgesCount = 0;
-    // Hub edges
     EDGE_DEFS.forEach((e) => {
       if (hubPower[e.from] && hubPower[e.to]) visibleEdgesCount++;
     });
-    // Internal community edges
     Object.values(NETWORKS).forEach((net) => {
       net.edges.forEach((ed) => {
         if (nodePower[ed.from] && nodePower[ed.to]) visibleEdgesCount++;
@@ -858,7 +786,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     if (statE) statE.textContent = visibleEdgesCount;
   }
 
-  // Bind Quick Community Power Buttons
   document.querySelectorAll(".comm-toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const cKey = btn.getAttribute("data-comm");
@@ -870,9 +797,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
   document.getElementById("btnPowerAllOn")?.addEventListener("click", () => setAllNodesPower(true));
   document.getElementById("btnPowerAllOff")?.addEventListener("click", () => setAllNodesPower(false));
 
-  // -------------------------------------------------------------
-  // 4. GESTOR DE 50 NODOS MODAL POPUP
-  // -------------------------------------------------------------
+  // 5. GESTOR DE 50 NODOS MODAL
   const managerModal = document.getElementById("node-manager-modal");
   const btnOpenManager = document.getElementById("btnOpenNodeManager");
   const btnCloseManager = document.getElementById("btnCloseNodeManager");
@@ -897,7 +822,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       card.innerHTML = `
         <div class="node-info-text">
           <div class="node-info-name">
-            <span style="color:${color}; font-size:14px;"><i class="fa-solid ${n.faIcon}"></i></span>
+            <span style="font-size:16px;">${n.icon || '●'}</span>
             <span>${n.name}</span>
             <span style="font-size:10px; color:#8fa5af; background:rgba(255,255,255,0.08); padding:2px 6px; border-radius:4px;">${n.id}</span>
             ${n.isHub ? '<span style="font-size:9.5px; background:rgba(47,212,200,0.2); color:#2fd4c8; padding:2px 6px; border-radius:4px; font-weight:800;">HUB</span>' : ''}
@@ -952,9 +877,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     }
   });
 
-  // -------------------------------------------------------------
-  // 5. POPUP DE RELACIONES ENTRE HUBS
-  // -------------------------------------------------------------
+  // 6. POPUP DE RELACIONES (CON CITAS Y JUSTIFICACIÓN)
   let activePopup = null;
   function closePopup() {
     if (activePopup) {
@@ -981,7 +904,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       <button class="pot-popup-close" type="button" aria-label="Cerrar">✕</button>
       <div class="pot-relation">${edge.relation}</div>
       <div style="font-size:12px;color:#2fd4c8;font-weight:700;margin-bottom:8px;">
-        ${fromHub.label.join(" ")} ➔ ${toHub.label.join(" ")}
+        ${fromHub.lines.join(" ")} ➔ ${toHub.lines.join(" ")}
       </div>
       <div class="pot-quote">"${edge.quote}"</div>
       <div class="pot-page">
@@ -1022,14 +945,11 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     if (activePopup && !activePopup.contains(e.target)) closePopup();
   });
 
-  // -------------------------------------------------------------
-  // 6. SUBRED MODAL POPUP
-  // -------------------------------------------------------------
+  // 7. SUBRED MODAL POPUP
   const overlay = document.getElementById("redes-modal-overlay");
   const modalClose = overlay?.querySelector(".redes-modal-close");
   const modalTitle = overlay?.querySelector("#redes-modal-title");
   const modalSubtitle = overlay?.querySelector(".redes-modal-subtitle");
-  const modalSvg = overlay?.querySelector(".redes-network-svg");
   const modalEdgesG = overlay?.querySelector(".redes-edges");
   const modalNodesG = overlay?.querySelector(".redes-nodes");
 
@@ -1078,7 +998,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
   }
 
   function renderSubnetwork(net) {
-    if (!overlay || !modalSvg || !modalEdgesG || !modalNodesG) return;
+    if (!overlay || !modalEdgesG || !modalNodesG) return;
 
     modalTitle.textContent = net.title;
     modalTitle.style.color = net.color;
@@ -1096,7 +1016,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       edgesByNode[nodeId].push(edgeEl);
     }
 
-    // Render Edges
     net.edges.forEach((e) => {
       const a = byId[e.from], b = byId[e.to];
       if (!a || !b) return;
@@ -1111,17 +1030,14 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       const isBothOn = nodePower[e.from] && nodePower[e.to];
       const g = el("g", {
         class: `redes-edge redes-edge-${e.kind}${e.dashed ? " is-dashed" : ""}${!isBothOn ? " edge-hidden" : ""}`,
-        "data-edge-from": e.from,
-        "data-edge-to": e.to,
-        tabindex: "0",
-        role: "button",
-        "aria-label": `Vínculo ${a.fullName} - ${b.fullName}`
+        "data-edge-from": e.from, "data-edge-to": e.to,
+        tabindex: "0", role: "button", "aria-label": `Vínculo ${a.fullName} - ${b.fullName}`
       });
 
       const d = `M${p0.x.toFixed(1)},${p0.y.toFixed(1)} L${p1.x.toFixed(1)},${p1.y.toFixed(1)}`;
-      const blob = el("path", { class: `redes-edge-blob redes-edge-blob-${e.kind}`, d, filter: "url(#blob-blur)" });
-      const hit = el("path", { class: "redes-edge-hit", d });
-      const line = el("path", { class: "redes-edge-line", d });
+      const blob = el("path", { class: `redes-edge-blob redes-edge-blob-${e.kind}`, d, fill: "none", filter: "url(#blob-blur)" });
+      const hit = el("path", { class: "redes-edge-hit", d, fill: "none", stroke: "transparent", "stroke-width": "16" });
+      const line = el("path", { class: "redes-edge-line", d, fill: "none" });
 
       g.appendChild(blob);
       g.appendChild(hit);
@@ -1130,7 +1046,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       if (e.directed) {
         const angle = (Math.atan2(p1.y - p0.y, p1.x - p0.x) * 180) / Math.PI;
         const arrow = el("path", {
-          class: "redes-edge-arrow",
+          class: "redes-edge-arrow", fill: "rgba(255,255,255,0.6)",
           d: "M-9,-4 L0,0 L-9,4 Z",
           transform: `translate(${p1.x.toFixed(1)},${p1.y.toFixed(1)}) rotate(${angle.toFixed(1)})`
         });
@@ -1148,16 +1064,13 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       linkEdge(e.to, g);
     });
 
-    // Render Nodes
     net.nodes.forEach((n, idx) => {
       const isVisible = !!nodePower[n.id];
       const g = el("g", {
         class: `redes-node${n.primary ? " is-primary" : ""}${!isVisible ? " is-off" : ""}`,
         "data-accent": net.accent,
         "data-node-id": n.id,
-        tabindex: "0",
-        role: "button",
-        "aria-label": n.fullName,
+        tabindex: "0", role: "button", "aria-label": n.fullName,
         transform: `translate(${n.x},${n.y})`
       });
 
@@ -1165,42 +1078,34 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       floatG.style.animationDuration = (4.4 + (idx % 5) * 0.35).toFixed(2) + "s";
       floatG.style.animationDelay = (-(idx % 7) * 0.5).toFixed(2) + "s";
 
-      const circle = el("circle", { r: n.r });
+      const circle = el("circle", { r: n.r, fill: "#11202b", stroke: net.color, "stroke-width": n.primary ? "4" : "2.5" });
       floatG.appendChild(circle);
 
-      const iconSize = Math.max(16, n.r * 0.52);
-      const fo = el("foreignObject", {
-        class: "redes-node-icon-fo",
-        x: -iconSize / 2,
-        y: -(n.r * 0.65),
-        width: iconSize,
-        height: iconSize
+      const iconText = el("text", {
+        x: 0, y: -(n.r * 0.22), "font-size": n.primary ? "20" : "15",
+        "text-anchor": "middle", "pointer-events": "none"
       });
-      const div = document.createElement("div");
-      div.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-      div.className = "redes-node-icon";
-      div.innerHTML = `<i class="fa-solid ${n.icon}"></i>`;
-      fo.appendChild(div);
-      floatG.appendChild(fo);
+      iconText.textContent = n.emoji || "●";
+      floatG.appendChild(iconText);
 
-      const text = el("text", { class: "redes-node-label", y: -(n.r * 0.65) + iconSize + 2 });
+      const text = el("text", {
+        class: "redes-node-label", x: 0, y: (n.r * 0.2), fill: "#ffffff",
+        "font-family": "'Inter', Arial, sans-serif", "font-weight": "700", "text-anchor": "middle", "pointer-events": "none"
+      });
       n.label.forEach((lineText, lIdx) => {
-        const span = el("tspan", { x: 0, dy: lIdx === 0 ? 10 : 11 });
+        const span = el("tspan", { x: 0, dy: lIdx === 0 ? 0 : 10, fill: "#ffffff" });
         span.textContent = lineText;
         text.appendChild(span);
       });
       floatG.appendChild(text);
       g.appendChild(floatG);
 
-      // Node Click: Toggle Power ON / OFF + update inspector card!
       g.addEventListener("click", (ev) => {
         ev.stopPropagation();
         closeSustentoPopup();
 
-        // Toggle power on this node
         setNodePower(n.id, !nodePower[n.id]);
 
-        // Update Actor Detail Box
         const nameEl = document.getElementById("actorDetailName");
         const roleEl = document.getElementById("actorDetailRole");
         const obsEl = document.getElementById("actorDetailObs");
@@ -1264,9 +1169,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     });
   });
 
-  // -------------------------------------------------------------
-  // 7. RED COMPLETA DE 50 NODOS (VISTA GLOBAL DE GALAXIA)
-  // -------------------------------------------------------------
+  // 8. RED COMPLETA DE 50 NODOS
   const btnModeHubs = document.getElementById("btnModeHubs");
   const btnMode50 = document.getElementById("btnMode50");
   const svg50 = document.getElementById("kennedy-50-svg");
@@ -1279,11 +1182,11 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
     initialized50 = true;
 
     const clusterCenters = {
-      'Comunidad': { x: 440, y: 130, color: '#2fbfae', grad: 'grad-green' },
-      'Producción y comercio': { x: 670, y: 260, color: '#eab04c', grad: 'grad-yellow' },
-      'Formación y gestión': { x: 580, y: 490, color: '#ef8b3c', grad: 'grad-blue' },
-      'Instituciones y soporte': { x: 300, y: 490, color: '#b784f4', grad: 'grad-purple' },
-      'No humanos y entorno': { x: 210, y: 260, color: '#34d399', grad: 'grad-coral' }
+      'Comunidad': { x: 440, y: 130, color: '#2fbfae' },
+      'Producción y comercio': { x: 670, y: 260, color: '#eab04c' },
+      'Formación y gestión': { x: 580, y: 490, color: '#ef8b3c' },
+      'Instituciones y soporte': { x: 300, y: 490, color: '#b784f4' },
+      'No humanos y entorno': { x: 210, y: 260, color: '#34d399' }
     };
 
     const nodeCoords = {};
@@ -1302,14 +1205,11 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
         nodeCoords[n.id] = {
           x: Math.round(c.x + rDist * Math.cos(angle)),
           y: Math.round(c.y + rDist * Math.sin(angle)),
-          r: 15,
-          node: n,
-          color: c.color
+          r: 15, node: n, color: c.color
         };
       }
     });
 
-    // Edges
     ALL_NODES.forEach((n) => {
       if (n.isHub) {
         const members = ALL_NODES.filter((m) => m.community === n.community && !m.isHub);
@@ -1318,7 +1218,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
           const isBothOn = nodePower[n.id] && nodePower[m.id];
           const line = el("line", {
             x1: a.x, y1: a.y, x2: b.x, y2: b.y,
-            stroke: a.color, "stroke-width": 1.2, opacity: 0.35,
+            stroke: a.color, "stroke-width": "1.2", opacity: "0.35",
             class: `edge-50${!isBothOn ? " edge-hidden" : ""}`,
             "data-from": n.id, "data-to": m.id
           });
@@ -1327,45 +1227,35 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       }
     });
 
-    // Inter-hub lines
     const hubPairs = [["N02", "N11"], ["N11", "N23"], ["N23", "N31"], ["N31", "N41"], ["N41", "N02"]];
     hubPairs.forEach(([h1, h2]) => {
       const a = nodeCoords[h1], b = nodeCoords[h2];
       const isBothOn = nodePower[h1] && nodePower[h2];
       const line = el("line", {
         x1: a.x, y1: a.y, x2: b.x, y2: b.y,
-        stroke: "#2fd4c8", "stroke-width": 2.2, "stroke-dasharray": "6 4", opacity: 0.7,
+        stroke: "#2fd4c8", "stroke-width": "2.2", "stroke-dasharray": "6 4", opacity: "0.7",
         class: `edge-50 edge-hub-link${!isBothOn ? " edge-hidden" : ""}`,
         "data-from": h1, "data-to": h2
       });
       svg50Links.appendChild(line);
     });
 
-    // Nodes
     Object.values(nodeCoords).forEach(({ x, y, r, node, color }) => {
       const isVisible = !!nodePower[node.id];
       const g = el("g", {
         class: `node-50${node.isHub ? " is-hub" : ""}${!isVisible ? " is-off" : ""}`,
-        "data-id": node.id,
-        "data-dim": node.dimension,
+        "data-id": node.id, "data-dim": node.dimension,
         transform: `translate(${x},${y})`
       });
 
       const circle = el("circle", {
-        r: r,
-        fill: "#0c1822",
-        stroke: color,
-        "stroke-width": node.isHub ? 3 : 1.8
+        r: r, fill: "#11202b", stroke: color, "stroke-width": node.isHub ? "3" : "1.8"
       });
-      circle.style.color = color;
       g.appendChild(circle);
 
       const text = el("text", {
-        y: node.isHub ? 4 : 3,
-        "text-anchor": "middle",
-        fill: "#ffffff",
-        "font-size": node.isHub ? 11 : 8.5,
-        "font-weight": node.isHub ? 800 : 600,
+        y: node.isHub ? 4 : 3, "text-anchor": "middle",
+        fill: "#ffffff", "font-size": node.isHub ? "11" : "8.5", "font-weight": node.isHub ? "800" : "600",
         "pointer-events": "none"
       });
       text.textContent = node.icon || node.name.slice(0, 3);
@@ -1375,7 +1265,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
       title.textContent = `[${node.id}] ${node.name} (Clic: Prender/Apagar)`;
       g.appendChild(title);
 
-      // Click: Toggle Power ON / OFF directly!
       g.addEventListener("click", () => {
         setNodePower(node.id, !nodePower[node.id]);
       });
@@ -1386,15 +1275,9 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
 
   btnModeHubs?.addEventListener("click", () => {
     btnModeHubs.classList.add("active");
-    btnModeHubs.style.background = "#2fd4c8";
-    btnModeHubs.style.color = "#08131d";
-    btnModeHubs.style.borderColor = "#2fd4c8";
-
+    btnModeHubs.style.background = "#2fd4c8"; btnModeHubs.style.color = "#08131d"; btnModeHubs.style.borderColor = "#2fd4c8";
     btnMode50.classList.remove("active");
-    btnMode50.style.background = "transparent";
-    btnMode50.style.color = "#eaf4f4";
-    btnMode50.style.borderColor = "var(--ink)";
-
+    btnMode50.style.background = "transparent"; btnMode50.style.color = "#eaf4f4"; btnMode50.style.borderColor = "var(--ink)";
     mainSvg.style.display = "";
     svg50.style.display = "none";
     ensureLoop();
@@ -1402,21 +1285,14 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
 
   btnMode50?.addEventListener("click", () => {
     btnMode50.classList.add("active");
-    btnMode50.style.background = "#2fd4c8";
-    btnMode50.style.color = "#08131d";
-    btnMode50.style.borderColor = "#2fd4c8";
-
+    btnMode50.style.background = "#2fd4c8"; btnMode50.style.color = "#08131d"; btnMode50.style.borderColor = "#2fd4c8";
     btnModeHubs.classList.remove("active");
-    btnModeHubs.style.background = "transparent";
-    btnModeHubs.style.color = "#eaf4f4";
-    btnModeHubs.style.borderColor = "var(--ink)";
-
+    btnModeHubs.style.background = "transparent"; btnModeHubs.style.color = "#eaf4f4"; btnModeHubs.style.borderColor = "var(--ink)";
     mainSvg.style.display = "none";
     svg50.style.display = "";
     init50NodeGalaxy();
   });
 
-  // Slide observer
   const slide = document.getElementById("socialNetworkSlide");
   if (slide) {
     const obs = new MutationObserver(() => {
@@ -1429,7 +1305,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else
 
   updateLiveStats();
 })();
-
 </script>
 <!-- ============ POPUP: redes por estructura (Idéntico a modelamiento2) ============ -->
 <div id="redes-modal-overlay" class="redes-modal-overlay" hidden>
